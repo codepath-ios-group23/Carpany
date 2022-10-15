@@ -134,6 +134,8 @@ Optional:
 ## Wireframes
 <img src="https://i.imgur.com/UtxZH5I.jpg" width=600>
 
-## Digital" width=600>
+## Digtal Wireframes & Mockups
+<img src="https://i.imgur.com/sd9yKQy.png" width=600>
 
 ## Interactive Prototype
+<img src="https://i.imgur.com/LcPu3j2.gif" width=600>
