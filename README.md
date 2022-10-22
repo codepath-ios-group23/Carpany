@@ -138,7 +138,7 @@ Optional:
 <img src="https://i.imgur.com/sgzduCj.png" width=600>
 
 ## Interactive Prototype
-<img src="hhttps://i.imgur.com/A272SSO.gif" width=600>
+<img src="https://i.imgur.com/A272SSO.gif" width=600>
 
 ## Schema 
 ### Models
