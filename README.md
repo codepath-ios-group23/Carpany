@@ -141,42 +141,108 @@ Optional:
 <img src="https://i.imgur.com/A272SSO.gif" width=600>
 
 ## Schema 
+
 ### Models
+
 #### Post
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | objectId      | String   | unique id for the user post (default field) |
    | author        | Pointer to User| image author |
-   | image         | File     | image that user posts |
+   | images        | List of Files     | images that user posts |
+   | cars          | List of Pointers to Car     | cars mentioned in the post |
    | caption       | String   | image caption by author |
    | commentsCount | Number   | number of comments that has been posted to an image |
+   | comments      | List of Pointers to Comment   | number of comments that has been posted to an image |
    | likesCount    | Number   | number of likes for the post |
    | createdAt     | DateTime | date when post is created (default field) |
    | updatedAt     | DateTime | date when post is last updated (default field) |
+#### User
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user (default field) |
+   | userName      | String   | name displayed on user's profile |
+   | gender        | Number   | user's gender |
+   | status        | Number   | user's current status/feeling |
+   | description   | String   | description/self-introduction of the user |
+   | owns          | List of Pointers to Cars   | cars the user owns |
+   |createdAt|DateTime|Date when account is created|
+#### Car
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | carId         |String        |unique id for car(default field)|
+   | carName|String|car name              |
+   |brand|Pointer|id for car's brand|
+   |carDescription|JSON|description of cars|
+   |carImages|List of Files|Images for cars|
+   |likeNum|Number|number of users that favor this car|
+#### Brand
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   |brandId| String| unique id for brand(default field)|
+   |brandName|String|name for car's brand|
+   |brandDescription|String| description for this brand|
+   |foundationYear|DateTime|year of foundation for this brand|
+   
+#### Comment
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   |commentId|String|unique id for comments(default field)|
+   |content|String|content for comments|
+   |author|Pointer to user|user id|
+   |createdAt|DateTime|date when comments are created|
+   |updatedAt|DateTime|date when comments are updated|
+
 ### Networking
 #### List of network requests by screen
-   - Home Feed Screen
-      - (Read/GET) Query all posts where user is author
-         ```swift
-         let query = PFQuery(className:"Post")
-         query.whereKey("author", equalTo: currentUser)
-         query.order(byDescending: "createdAt")
-         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
-            if let error = error { 
-               print(error.localizedDescription)
-            } else if let posts = posts {
-               print("Successfully retrieved \(posts.count) posts.")
-           // TODO: Do something with posts...
-            }
-         }
-         ```
+   - Home Screen
+      - Home Tab
+          - (Read/GET) Query all posts where user is author
+             ```swift
+             let query = PFQuery(className:"Post")
+             query.whereKey("author", equalTo: currentUser)
+             query.order(byDescending: "createdAt")
+             query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+                if let error = error { 
+                   print(error.localizedDescription)
+                } else if let posts = posts {
+                   print("Successfully retrieved \(posts.count) posts.")
+               // TODO: Do something with posts...
+                }
+             }
+             ```
+          - (Create/POST) Create a new like on a post
+          - (Delete) Delete existing like
+          - (Create/POST) Create a new comment on a post
+          - (Delete) Delete existing comment
+          - (Search/POST) Search existing posts with parsed keywords
+          - (Filter/POST) Show existing posts with conditions
+      - Map Tab
+          - (Search/POST) Search existing locations with parsed keywords
+          - (Filter/POST) Show existing locations with conditions
+      - Search Tab
+          - (Search/POST) Search existing cars with parsed keywords
+          - (Add/GET) Add car item object into my garage
+      - Profile Tab
+          - (Read/GET) Query logged in user object
+          - (Update/PUT) Update user profile Information 
+          - (Update/PUT) Update user status
+   - Edit Screen
+      - (Create/POST) Create a new post object
+      - (Add/POST) Add car item objects
+   - Detailed reading screen
       - (Create/POST) Create a new like on a post
       - (Delete) Delete existing like
       - (Create/POST) Create a new comment on a post
       - (Delete) Delete existing comment
-   - Create Post Screen
-      - (Create/POST) Create a new post object
-   - Profile Screen
-      - (Read/GET) Query logged in user object
-      - (Update/PUT) Update user profile image
+   - Car Details Screen
+      - (Add/GET) Add car item object into my garage
+   - Garage Screen
+      - (Filter/POST) Show existing favorite cars with conditions3
+      - (Delete) Delete existing owned car item object
+
