@@ -16,6 +16,7 @@
 		815BFFD1290C793B0053D8C4 /* carpanyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BFFD0290C793B0053D8C4 /* carpanyTests.swift */; };
 		815BFFDB290C793B0053D8C4 /* carpanyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BFFDA290C793B0053D8C4 /* carpanyUITests.swift */; };
 		815BFFDD290C793B0053D8C4 /* carpanyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BFFDC290C793B0053D8C4 /* carpanyUITestsLaunchTests.swift */; };
+		819133D8290C8D5C0080BEB5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819133D7290C8D5C0080BEB5 /* ProfileViewController.swift */; };
 		86740E9EE845E677802DED8B /* Pods_carpany.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CEBDC84D79A16268488030 /* Pods_carpany.framework */; };
 		A7A268A6605703A8769342B3 /* Pods_carpanyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8110E6E6936A82A108E95D86 /* Pods_carpanyTests.framework */; };
 		AC8BC9F6FE7C3FC7127B09E8 /* Pods_carpany_carpanyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F676C6D59EDF1249A8E5A508 /* Pods_carpany_carpanyUITests.framework */; };
@@ -57,6 +58,7 @@
 		815BFFD6290C793B0053D8C4 /* carpanyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carpanyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		815BFFDA290C793B0053D8C4 /* carpanyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carpanyUITests.swift; sourceTree = "<group>"; };
 		815BFFDC290C793B0053D8C4 /* carpanyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carpanyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		819133D7290C8D5C0080BEB5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8644C6F31C16AD047E738ABE /* Pods-carpany.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpany.debug.xcconfig"; path = "Target Support Files/Pods-carpany/Pods-carpany.debug.xcconfig"; sourceTree = "<group>"; };
 		C2198A1FB18FC156F2429626 /* Pods-carpany-carpanyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpany-carpanyUITests.debug.xcconfig"; path = "Target Support Files/Pods-carpany-carpanyUITests/Pods-carpany-carpanyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E31D474DE624EFBF788A610D /* Pods-carpany.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpany.release.xcconfig"; path = "Target Support Files/Pods-carpany/Pods-carpany.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,7 +103,6 @@
 				42BE527A4529FF5BAC1B16D1 /* Pods-carpanyTests.debug.xcconfig */,
 				6EED3AF48EFB03CEDD43E870 /* Pods-carpanyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -137,6 +138,7 @@
 				815BFFC2290C793B0053D8C4 /* Assets.xcassets */,
 				815BFFC4290C793B0053D8C4 /* LaunchScreen.storyboard */,
 				815BFFC7290C793B0053D8C4 /* Info.plist */,
+				819133D7290C8D5C0080BEB5 /* ProfileViewController.swift */,
 			);
 			path = carpany;
 			sourceTree = "<group>";
@@ -409,6 +411,7 @@
 			files = (
 				815BFFBE290C793A0053D8C4 /* ViewController.swift in Sources */,
 				815BFFBA290C793A0053D8C4 /* AppDelegate.swift in Sources */,
+				819133D8290C8D5C0080BEB5 /* ProfileViewController.swift in Sources */,
 				815BFFBC290C793A0053D8C4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
