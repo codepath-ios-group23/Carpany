@@ -10,11 +10,13 @@ PODS:
     - Parse/Core (= 1.19.3)
   - Parse/Core (1.19.3):
     - Bolts/Tasks (= 1.9.1)
+  - ParseSwift (4.14.2)
 
 DEPENDENCIES:
   - AlamofireImage
   - MessageInputBar
   - Parse
+  - ParseSwift
 
 SPEC REPOS:
   trunk:
@@ -23,6 +25,7 @@ SPEC REPOS:
     - Bolts
     - MessageInputBar
     - Parse
+    - ParseSwift
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
@@ -30,7 +33,8 @@ SPEC CHECKSUMS:
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
   Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
+  ParseSwift: 5df70e3d5aed3351fb3188ddf0a2812b7983a379
 
-PODFILE CHECKSUM: 16260f450fac245812cb6ad79fbab490d94969ec
+PODFILE CHECKSUM: 60bb115bd094b082f3430c902bccb00226e8a410
 
 COCOAPODS: 1.11.3
