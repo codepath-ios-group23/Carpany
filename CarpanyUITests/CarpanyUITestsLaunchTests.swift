@@ -1,13 +1,13 @@
 //
-//  CarpanyUITestsLaunchTests.swift
-//  CarpanyUITests
+//  carpanyUITestsLaunchTests.swift
+//  carpanyUITests
 //
-//  Created by Trang Do on 10/17/22.
+//  Created by Richard Zhang on 10/28/22.
 //
 
 import XCTest
 
-final class CarpanyUITestsLaunchTests: XCTestCase {
+final class carpanyUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

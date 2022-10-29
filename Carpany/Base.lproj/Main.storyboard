@@ -92,7 +92,6 @@
                     <connections>
                         <outlet property="passwordField" destination="ciV-6M-NFr" id="LWg-VH-14n"/>
                         <outlet property="usernameField" destination="1J8-Wn-duI" id="Kcx-pT-4WD"/>
-                        <segue destination="16B-7v-g9W" kind="show" identifier="loginSegue" id="Ftb-e4-mrY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -180,7 +179,6 @@
                         <outlet property="passwordField" destination="Cwr-0I-2xn" id="Fp7-RC-acK"/>
                         <outlet property="profileImage" destination="8tW-Nz-7Kn" id="wEU-R9-Cda"/>
                         <outlet property="usernameField" destination="V60-RU-x1w" id="ODb-iu-j0a"/>
-                        <segue destination="16B-7v-g9W" kind="show" identifier="loginSegue" id="nTX-9O-Dmq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2SE-ep-NBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -192,26 +190,7 @@
             </objects>
             <point key="canvasLocation" x="1734" y="4"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="8B8-Mi-oYN">
-            <objects>
-                <viewController id="16B-7v-g9W" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="C4M-ON-WjQ">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="JbJ-Uc-oAy"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="wgQ-HP-ljh"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FGA-Td-fcD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1334" y="861"/>
-        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Ftb-e4-mrY"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="icons8-add-image-50" width="50" height="50"/>
         <image name="icons8-user-67" width="67" height="67"/>
