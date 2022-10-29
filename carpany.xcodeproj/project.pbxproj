@@ -3,296 +3,310 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		815BFFBA290C793A0053D8C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BFFB9290C793A0053D8C4 /* AppDelegate.swift */; };
-		815BFFBC290C793A0053D8C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BFFBB290C793A0053D8C4 /* SceneDelegate.swift */; };
-		815BFFBE290C793A0053D8C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BFFBD290C793A0053D8C4 /* ViewController.swift */; };
-		815BFFC1290C793A0053D8C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815BFFBF290C793A0053D8C4 /* Main.storyboard */; };
-		815BFFC3290C793B0053D8C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815BFFC2290C793B0053D8C4 /* Assets.xcassets */; };
-		815BFFC6290C793B0053D8C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815BFFC4290C793B0053D8C4 /* LaunchScreen.storyboard */; };
-		815BFFD1290C793B0053D8C4 /* carpanyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BFFD0290C793B0053D8C4 /* carpanyTests.swift */; };
-		815BFFDB290C793B0053D8C4 /* carpanyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BFFDA290C793B0053D8C4 /* carpanyUITests.swift */; };
-		815BFFDD290C793B0053D8C4 /* carpanyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BFFDC290C793B0053D8C4 /* carpanyUITestsLaunchTests.swift */; };
-		819133D8290C8D5C0080BEB5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819133D7290C8D5C0080BEB5 /* ProfileViewController.swift */; };
-		86740E9EE845E677802DED8B /* Pods_carpany.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CEBDC84D79A16268488030 /* Pods_carpany.framework */; };
-		A7A268A6605703A8769342B3 /* Pods_carpanyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8110E6E6936A82A108E95D86 /* Pods_carpanyTests.framework */; };
-		AC8BC9F6FE7C3FC7127B09E8 /* Pods_carpany_carpanyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F676C6D59EDF1249A8E5A508 /* Pods_carpany_carpanyUITests.framework */; };
+		524FC72B28FE5817007E8801 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524FC72A28FE5817007E8801 /* LoginViewController.swift */; };
+		524FC72D28FE5825007E8801 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524FC72C28FE5825007E8801 /* SignUpViewController.swift */; };
+		524FC72F28FE5F50007E8801 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524FC72E28FE5F50007E8801 /* User.swift */; };
+		5288C6885924DBDBA0D5A055 /* Pods_Carpany.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A246B0AA5B09482180965380 /* Pods_Carpany.framework */; };
+		52FCF44328FE2A9800C0FDCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCF44228FE2A9800C0FDCB /* AppDelegate.swift */; };
+		52FCF44528FE2A9800C0FDCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCF44428FE2A9800C0FDCB /* SceneDelegate.swift */; };
+		52FCF44A28FE2A9800C0FDCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FCF44828FE2A9800C0FDCB /* Main.storyboard */; };
+		52FCF44C28FE2A9900C0FDCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FCF44B28FE2A9900C0FDCB /* Assets.xcassets */; };
+		52FCF44F28FE2A9900C0FDCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FCF44D28FE2A9900C0FDCB /* LaunchScreen.storyboard */; };
+		52FCF45A28FE2A9900C0FDCB /* CarpanyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCF45928FE2A9900C0FDCB /* CarpanyTests.swift */; };
+		52FCF46428FE2A9900C0FDCB /* CarpanyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCF46328FE2A9900C0FDCB /* CarpanyUITests.swift */; };
+		52FCF46628FE2A9900C0FDCB /* CarpanyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCF46528FE2A9900C0FDCB /* CarpanyUITestsLaunchTests.swift */; };
+		56887EEBAAA198B4988A2121 /* Pods_Carpany_CarpanyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C1045C8A0C80AA5A7D63ED /* Pods_Carpany_CarpanyUITests.framework */; };
+		81B5B6E9290CBEC10092C254 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B5B6E8290CBEC10092C254 /* ProfileViewController.swift */; };
+		CB329E13C3F097AB313DC85D /* Pods_CarpanyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5C2559C5666AAD00CA175 /* Pods_CarpanyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		815BFFCD290C793B0053D8C4 /* PBXContainerItemProxy */ = {
+		52FCF45628FE2A9900C0FDCB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 815BFFAE290C793A0053D8C4 /* Project object */;
+			containerPortal = 52FCF43728FE2A9800C0FDCB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 815BFFB5290C793A0053D8C4;
-			remoteInfo = carpany;
+			remoteGlobalIDString = 52FCF43E28FE2A9800C0FDCB;
+			remoteInfo = Carpany;
 		};
-		815BFFD7290C793B0053D8C4 /* PBXContainerItemProxy */ = {
+		52FCF46028FE2A9900C0FDCB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 815BFFAE290C793A0053D8C4 /* Project object */;
+			containerPortal = 52FCF43728FE2A9800C0FDCB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 815BFFB5290C793A0053D8C4;
-			remoteInfo = carpany;
+			remoteGlobalIDString = 52FCF43E28FE2A9800C0FDCB;
+			remoteInfo = Carpany;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19CEBDC84D79A16268488030 /* Pods_carpany.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carpany.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		42BE527A4529FF5BAC1B16D1 /* Pods-carpanyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpanyTests.debug.xcconfig"; path = "Target Support Files/Pods-carpanyTests/Pods-carpanyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		6267818DCCDF4341598BCCEC /* Pods-carpany-carpanyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpany-carpanyUITests.release.xcconfig"; path = "Target Support Files/Pods-carpany-carpanyUITests/Pods-carpany-carpanyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		6EED3AF48EFB03CEDD43E870 /* Pods-carpanyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpanyTests.release.xcconfig"; path = "Target Support Files/Pods-carpanyTests/Pods-carpanyTests.release.xcconfig"; sourceTree = "<group>"; };
-		8110E6E6936A82A108E95D86 /* Pods_carpanyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carpanyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		815BFFB6290C793A0053D8C4 /* carpany.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carpany.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		815BFFB9290C793A0053D8C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		815BFFBB290C793A0053D8C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		815BFFBD290C793A0053D8C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		815BFFC0290C793A0053D8C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		815BFFC2290C793B0053D8C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		815BFFC5290C793B0053D8C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		815BFFC7290C793B0053D8C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		815BFFCC290C793B0053D8C4 /* carpanyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carpanyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		815BFFD0290C793B0053D8C4 /* carpanyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carpanyTests.swift; sourceTree = "<group>"; };
-		815BFFD6290C793B0053D8C4 /* carpanyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carpanyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		815BFFDA290C793B0053D8C4 /* carpanyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carpanyUITests.swift; sourceTree = "<group>"; };
-		815BFFDC290C793B0053D8C4 /* carpanyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carpanyUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		819133D7290C8D5C0080BEB5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		8644C6F31C16AD047E738ABE /* Pods-carpany.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpany.debug.xcconfig"; path = "Target Support Files/Pods-carpany/Pods-carpany.debug.xcconfig"; sourceTree = "<group>"; };
-		C2198A1FB18FC156F2429626 /* Pods-carpany-carpanyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpany-carpanyUITests.debug.xcconfig"; path = "Target Support Files/Pods-carpany-carpanyUITests/Pods-carpany-carpanyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		E31D474DE624EFBF788A610D /* Pods-carpany.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpany.release.xcconfig"; path = "Target Support Files/Pods-carpany/Pods-carpany.release.xcconfig"; sourceTree = "<group>"; };
-		F676C6D59EDF1249A8E5A508 /* Pods_carpany_carpanyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carpany_carpanyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17D5C2559C5666AAD00CA175 /* Pods_CarpanyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarpanyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C52F2EAEDBC8568AEF04595 /* Pods-Carpany-CarpanyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carpany-CarpanyUITests.release.xcconfig"; path = "Target Support Files/Pods-Carpany-CarpanyUITests/Pods-Carpany-CarpanyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		47C1045C8A0C80AA5A7D63ED /* Pods_Carpany_CarpanyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carpany_CarpanyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		524FC72A28FE5817007E8801 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		524FC72C28FE5825007E8801 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		524FC72E28FE5F50007E8801 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		52FCF43F28FE2A9800C0FDCB /* Carpany.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carpany.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52FCF44228FE2A9800C0FDCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52FCF44428FE2A9800C0FDCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		52FCF44928FE2A9800C0FDCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52FCF44B28FE2A9900C0FDCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52FCF44E28FE2A9900C0FDCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52FCF45028FE2A9900C0FDCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52FCF45528FE2A9900C0FDCB /* CarpanyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarpanyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52FCF45928FE2A9900C0FDCB /* CarpanyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarpanyTests.swift; sourceTree = "<group>"; };
+		52FCF45F28FE2A9900C0FDCB /* CarpanyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarpanyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52FCF46328FE2A9900C0FDCB /* CarpanyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarpanyUITests.swift; sourceTree = "<group>"; };
+		52FCF46528FE2A9900C0FDCB /* CarpanyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarpanyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5ED8A93F2DA2FB1089F01EE9 /* Pods-Carpany-CarpanyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carpany-CarpanyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Carpany-CarpanyUITests/Pods-Carpany-CarpanyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		81B5B6E8290CBEC10092C254 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9D8A989E194167C70C18AC70 /* Pods-CarpanyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarpanyTests.debug.xcconfig"; path = "Target Support Files/Pods-CarpanyTests/Pods-CarpanyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A246B0AA5B09482180965380 /* Pods_Carpany.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carpany.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE6AE8D0AC834020594A50E /* Pods-Carpany.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carpany.release.xcconfig"; path = "Target Support Files/Pods-Carpany/Pods-Carpany.release.xcconfig"; sourceTree = "<group>"; };
+		EFC6B575B3394853C4E6F8FA /* Pods-CarpanyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarpanyTests.release.xcconfig"; path = "Target Support Files/Pods-CarpanyTests/Pods-CarpanyTests.release.xcconfig"; sourceTree = "<group>"; };
+		F9C0A19972F7AE9804620539 /* Pods-Carpany.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carpany.debug.xcconfig"; path = "Target Support Files/Pods-Carpany/Pods-Carpany.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		815BFFB3290C793A0053D8C4 /* Frameworks */ = {
+		52FCF43C28FE2A9800C0FDCB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86740E9EE845E677802DED8B /* Pods_carpany.framework in Frameworks */,
+				5288C6885924DBDBA0D5A055 /* Pods_Carpany.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		815BFFC9290C793B0053D8C4 /* Frameworks */ = {
+		52FCF45228FE2A9900C0FDCB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7A268A6605703A8769342B3 /* Pods_carpanyTests.framework in Frameworks */,
+				CB329E13C3F097AB313DC85D /* Pods_CarpanyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		815BFFD3290C793B0053D8C4 /* Frameworks */ = {
+		52FCF45C28FE2A9900C0FDCB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC8BC9F6FE7C3FC7127B09E8 /* Pods_carpany_carpanyUITests.framework in Frameworks */,
+				56887EEBAAA198B4988A2121 /* Pods_Carpany_CarpanyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		203C57D4553C270613AF19F6 /* Pods */ = {
+		524FC72928FE57FF007E8801 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8644C6F31C16AD047E738ABE /* Pods-carpany.debug.xcconfig */,
-				E31D474DE624EFBF788A610D /* Pods-carpany.release.xcconfig */,
-				C2198A1FB18FC156F2429626 /* Pods-carpany-carpanyUITests.debug.xcconfig */,
-				6267818DCCDF4341598BCCEC /* Pods-carpany-carpanyUITests.release.xcconfig */,
-				42BE527A4529FF5BAC1B16D1 /* Pods-carpanyTests.debug.xcconfig */,
-				6EED3AF48EFB03CEDD43E870 /* Pods-carpanyTests.release.xcconfig */,
+				524FC72A28FE5817007E8801 /* LoginViewController.swift */,
+				524FC72C28FE5825007E8801 /* SignUpViewController.swift */,
+				81B5B6E8290CBEC10092C254 /* ProfileViewController.swift */,
 			);
-			path = Pods;
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
-		815BFFAD290C793A0053D8C4 = {
+		52FCF43628FE2A9800C0FDCB = {
 			isa = PBXGroup;
 			children = (
-				815BFFB8290C793A0053D8C4 /* carpany */,
-				815BFFCF290C793B0053D8C4 /* carpanyTests */,
-				815BFFD9290C793B0053D8C4 /* carpanyUITests */,
-				815BFFB7290C793A0053D8C4 /* Products */,
-				203C57D4553C270613AF19F6 /* Pods */,
-				E416D3E80D2D5BF45DBE721F /* Frameworks */,
+				52FCF44128FE2A9800C0FDCB /* Carpany */,
+				52FCF45828FE2A9900C0FDCB /* CarpanyTests */,
+				52FCF46228FE2A9900C0FDCB /* CarpanyUITests */,
+				52FCF44028FE2A9800C0FDCB /* Products */,
+				BCE3C35ECDA927D1E7E61F82 /* Pods */,
+				9FCD08290DE3773C947FA397 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		815BFFB7290C793A0053D8C4 /* Products */ = {
+		52FCF44028FE2A9800C0FDCB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				815BFFB6290C793A0053D8C4 /* carpany.app */,
-				815BFFCC290C793B0053D8C4 /* carpanyTests.xctest */,
-				815BFFD6290C793B0053D8C4 /* carpanyUITests.xctest */,
+				52FCF43F28FE2A9800C0FDCB /* Carpany.app */,
+				52FCF45528FE2A9900C0FDCB /* CarpanyTests.xctest */,
+				52FCF45F28FE2A9900C0FDCB /* CarpanyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		815BFFB8290C793A0053D8C4 /* carpany */ = {
+		52FCF44128FE2A9800C0FDCB /* Carpany */ = {
 			isa = PBXGroup;
 			children = (
-				815BFFB9290C793A0053D8C4 /* AppDelegate.swift */,
-				815BFFBB290C793A0053D8C4 /* SceneDelegate.swift */,
-				815BFFBD290C793A0053D8C4 /* ViewController.swift */,
-				815BFFBF290C793A0053D8C4 /* Main.storyboard */,
-				815BFFC2290C793B0053D8C4 /* Assets.xcassets */,
-				815BFFC4290C793B0053D8C4 /* LaunchScreen.storyboard */,
-				815BFFC7290C793B0053D8C4 /* Info.plist */,
-				819133D7290C8D5C0080BEB5 /* ProfileViewController.swift */,
+				524FC72928FE57FF007E8801 /* View Controller */,
+				52FCF44228FE2A9800C0FDCB /* AppDelegate.swift */,
+				52FCF44428FE2A9800C0FDCB /* SceneDelegate.swift */,
+				52FCF44828FE2A9800C0FDCB /* Main.storyboard */,
+				52FCF44B28FE2A9900C0FDCB /* Assets.xcassets */,
+				52FCF44D28FE2A9900C0FDCB /* LaunchScreen.storyboard */,
+				52FCF45028FE2A9900C0FDCB /* Info.plist */,
+				524FC72E28FE5F50007E8801 /* User.swift */,
 			);
-			path = carpany;
+			path = Carpany;
 			sourceTree = "<group>";
 		};
-		815BFFCF290C793B0053D8C4 /* carpanyTests */ = {
+		52FCF45828FE2A9900C0FDCB /* CarpanyTests */ = {
 			isa = PBXGroup;
 			children = (
-				815BFFD0290C793B0053D8C4 /* carpanyTests.swift */,
+				52FCF45928FE2A9900C0FDCB /* CarpanyTests.swift */,
 			);
-			path = carpanyTests;
+			path = CarpanyTests;
 			sourceTree = "<group>";
 		};
-		815BFFD9290C793B0053D8C4 /* carpanyUITests */ = {
+		52FCF46228FE2A9900C0FDCB /* CarpanyUITests */ = {
 			isa = PBXGroup;
 			children = (
-				815BFFDA290C793B0053D8C4 /* carpanyUITests.swift */,
-				815BFFDC290C793B0053D8C4 /* carpanyUITestsLaunchTests.swift */,
+				52FCF46328FE2A9900C0FDCB /* CarpanyUITests.swift */,
+				52FCF46528FE2A9900C0FDCB /* CarpanyUITestsLaunchTests.swift */,
 			);
-			path = carpanyUITests;
+			path = CarpanyUITests;
 			sourceTree = "<group>";
 		};
-		E416D3E80D2D5BF45DBE721F /* Frameworks */ = {
+		9FCD08290DE3773C947FA397 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				19CEBDC84D79A16268488030 /* Pods_carpany.framework */,
-				F676C6D59EDF1249A8E5A508 /* Pods_carpany_carpanyUITests.framework */,
-				8110E6E6936A82A108E95D86 /* Pods_carpanyTests.framework */,
+				A246B0AA5B09482180965380 /* Pods_Carpany.framework */,
+				47C1045C8A0C80AA5A7D63ED /* Pods_Carpany_CarpanyUITests.framework */,
+				17D5C2559C5666AAD00CA175 /* Pods_CarpanyTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCE3C35ECDA927D1E7E61F82 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9C0A19972F7AE9804620539 /* Pods-Carpany.debug.xcconfig */,
+				BDE6AE8D0AC834020594A50E /* Pods-Carpany.release.xcconfig */,
+				5ED8A93F2DA2FB1089F01EE9 /* Pods-Carpany-CarpanyUITests.debug.xcconfig */,
+				1C52F2EAEDBC8568AEF04595 /* Pods-Carpany-CarpanyUITests.release.xcconfig */,
+				9D8A989E194167C70C18AC70 /* Pods-CarpanyTests.debug.xcconfig */,
+				EFC6B575B3394853C4E6F8FA /* Pods-CarpanyTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		815BFFB5290C793A0053D8C4 /* carpany */ = {
+		52FCF43E28FE2A9800C0FDCB /* Carpany */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 815BFFE0290C793B0053D8C4 /* Build configuration list for PBXNativeTarget "carpany" */;
+			buildConfigurationList = 52FCF46928FE2A9900C0FDCB /* Build configuration list for PBXNativeTarget "Carpany" */;
 			buildPhases = (
-				265B9E361C5A0B30D1610E5C /* [CP] Check Pods Manifest.lock */,
-				815BFFB2290C793A0053D8C4 /* Sources */,
-				815BFFB3290C793A0053D8C4 /* Frameworks */,
-				815BFFB4290C793A0053D8C4 /* Resources */,
-				316D74BBFE004F31EE11D332 /* [CP] Embed Pods Frameworks */,
+				CE034F9A06B81A1CF7CF666D /* [CP] Check Pods Manifest.lock */,
+				52FCF43B28FE2A9800C0FDCB /* Sources */,
+				52FCF43C28FE2A9800C0FDCB /* Frameworks */,
+				52FCF43D28FE2A9800C0FDCB /* Resources */,
+				46663B95AC10E100CA9D2B6B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = carpany;
-			productName = carpany;
-			productReference = 815BFFB6290C793A0053D8C4 /* carpany.app */;
+			name = Carpany;
+			productName = Carpany;
+			productReference = 52FCF43F28FE2A9800C0FDCB /* Carpany.app */;
 			productType = "com.apple.product-type.application";
 		};
-		815BFFCB290C793B0053D8C4 /* carpanyTests */ = {
+		52FCF45428FE2A9900C0FDCB /* CarpanyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 815BFFE3290C793B0053D8C4 /* Build configuration list for PBXNativeTarget "carpanyTests" */;
+			buildConfigurationList = 52FCF46C28FE2A9900C0FDCB /* Build configuration list for PBXNativeTarget "CarpanyTests" */;
 			buildPhases = (
-				0765E675131DF140FBD0A87B /* [CP] Check Pods Manifest.lock */,
-				815BFFC8290C793B0053D8C4 /* Sources */,
-				815BFFC9290C793B0053D8C4 /* Frameworks */,
-				815BFFCA290C793B0053D8C4 /* Resources */,
+				5000B744A097C9AA11F773DC /* [CP] Check Pods Manifest.lock */,
+				52FCF45128FE2A9900C0FDCB /* Sources */,
+				52FCF45228FE2A9900C0FDCB /* Frameworks */,
+				52FCF45328FE2A9900C0FDCB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				815BFFCE290C793B0053D8C4 /* PBXTargetDependency */,
+				52FCF45728FE2A9900C0FDCB /* PBXTargetDependency */,
 			);
-			name = carpanyTests;
-			productName = carpanyTests;
-			productReference = 815BFFCC290C793B0053D8C4 /* carpanyTests.xctest */;
+			name = CarpanyTests;
+			productName = CarpanyTests;
+			productReference = 52FCF45528FE2A9900C0FDCB /* CarpanyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		815BFFD5290C793B0053D8C4 /* carpanyUITests */ = {
+		52FCF45E28FE2A9900C0FDCB /* CarpanyUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 815BFFE6290C793B0053D8C4 /* Build configuration list for PBXNativeTarget "carpanyUITests" */;
+			buildConfigurationList = 52FCF46F28FE2A9900C0FDCB /* Build configuration list for PBXNativeTarget "CarpanyUITests" */;
 			buildPhases = (
-				AAD7B735C1E33EEFCEB243E6 /* [CP] Check Pods Manifest.lock */,
-				815BFFD2290C793B0053D8C4 /* Sources */,
-				815BFFD3290C793B0053D8C4 /* Frameworks */,
-				815BFFD4290C793B0053D8C4 /* Resources */,
-				866B984121A6EC2C019619C1 /* [CP] Embed Pods Frameworks */,
+				1E964E05F817D1CF896EB5DC /* [CP] Check Pods Manifest.lock */,
+				52FCF45B28FE2A9900C0FDCB /* Sources */,
+				52FCF45C28FE2A9900C0FDCB /* Frameworks */,
+				52FCF45D28FE2A9900C0FDCB /* Resources */,
+				36267C4E482065811199B337 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				815BFFD8290C793B0053D8C4 /* PBXTargetDependency */,
+				52FCF46128FE2A9900C0FDCB /* PBXTargetDependency */,
 			);
-			name = carpanyUITests;
-			productName = carpanyUITests;
-			productReference = 815BFFD6290C793B0053D8C4 /* carpanyUITests.xctest */;
+			name = CarpanyUITests;
+			productName = CarpanyUITests;
+			productReference = 52FCF45F28FE2A9900C0FDCB /* CarpanyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		815BFFAE290C793A0053D8C4 /* Project object */ = {
+		52FCF43728FE2A9800C0FDCB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					815BFFB5290C793A0053D8C4 = {
+					52FCF43E28FE2A9800C0FDCB = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
-					815BFFCB290C793B0053D8C4 = {
+					52FCF45428FE2A9900C0FDCB = {
 						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = 815BFFB5290C793A0053D8C4;
+						TestTargetID = 52FCF43E28FE2A9800C0FDCB;
 					};
-					815BFFD5290C793B0053D8C4 = {
+					52FCF45E28FE2A9900C0FDCB = {
 						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = 815BFFB5290C793A0053D8C4;
+						TestTargetID = 52FCF43E28FE2A9800C0FDCB;
 					};
 				};
 			};
-			buildConfigurationList = 815BFFB1290C793A0053D8C4 /* Build configuration list for PBXProject "carpany" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = 52FCF43A28FE2A9800C0FDCB /* Build configuration list for PBXProject "Carpany" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 815BFFAD290C793A0053D8C4;
-			productRefGroup = 815BFFB7290C793A0053D8C4 /* Products */;
+			mainGroup = 52FCF43628FE2A9800C0FDCB;
+			productRefGroup = 52FCF44028FE2A9800C0FDCB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				815BFFB5290C793A0053D8C4 /* carpany */,
-				815BFFCB290C793B0053D8C4 /* carpanyTests */,
-				815BFFD5290C793B0053D8C4 /* carpanyUITests */,
+				52FCF43E28FE2A9800C0FDCB /* Carpany */,
+				52FCF45428FE2A9900C0FDCB /* CarpanyTests */,
+				52FCF45E28FE2A9900C0FDCB /* CarpanyUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		815BFFB4290C793A0053D8C4 /* Resources */ = {
+		52FCF43D28FE2A9800C0FDCB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				815BFFC6290C793B0053D8C4 /* LaunchScreen.storyboard in Resources */,
-				815BFFC3290C793B0053D8C4 /* Assets.xcassets in Resources */,
-				815BFFC1290C793A0053D8C4 /* Main.storyboard in Resources */,
+				52FCF44F28FE2A9900C0FDCB /* LaunchScreen.storyboard in Resources */,
+				52FCF44C28FE2A9900C0FDCB /* Assets.xcassets in Resources */,
+				52FCF44A28FE2A9800C0FDCB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		815BFFCA290C793B0053D8C4 /* Resources */ = {
+		52FCF45328FE2A9900C0FDCB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		815BFFD4290C793B0053D8C4 /* Resources */ = {
+		52FCF45D28FE2A9900C0FDCB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -302,7 +316,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0765E675131DF140FBD0A87B /* [CP] Check Pods Manifest.lock */ = {
+		1E964E05F817D1CF896EB5DC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -317,14 +331,48 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-carpanyTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Carpany-CarpanyUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		265B9E361C5A0B30D1610E5C /* [CP] Check Pods Manifest.lock */ = {
+		36267C4E482065811199B337 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Carpany-CarpanyUITests/Pods-Carpany-CarpanyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Carpany-CarpanyUITests/Pods-Carpany-CarpanyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Carpany-CarpanyUITests/Pods-Carpany-CarpanyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46663B95AC10E100CA9D2B6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Carpany/Pods-Carpany-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Carpany/Pods-Carpany-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Carpany/Pods-Carpany-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5000B744A097C9AA11F773DC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -339,48 +387,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-carpany-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CarpanyTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		316D74BBFE004F31EE11D332 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-carpany/Pods-carpany-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-carpany/Pods-carpany-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-carpany/Pods-carpany-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		866B984121A6EC2C019619C1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-carpany-carpanyUITests/Pods-carpany-carpanyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-carpany-carpanyUITests/Pods-carpany-carpanyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-carpany-carpanyUITests/Pods-carpany-carpanyUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AAD7B735C1E33EEFCEB243E6 /* [CP] Check Pods Manifest.lock */ = {
+		CE034F9A06B81A1CF7CF666D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -395,7 +409,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-carpany-carpanyUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Carpany-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -405,62 +419,64 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		815BFFB2290C793A0053D8C4 /* Sources */ = {
+		52FCF43B28FE2A9800C0FDCB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				815BFFBE290C793A0053D8C4 /* ViewController.swift in Sources */,
-				815BFFBA290C793A0053D8C4 /* AppDelegate.swift in Sources */,
-				819133D8290C8D5C0080BEB5 /* ProfileViewController.swift in Sources */,
-				815BFFBC290C793A0053D8C4 /* SceneDelegate.swift in Sources */,
+				81B5B6E9290CBEC10092C254 /* ProfileViewController.swift in Sources */,
+				524FC72F28FE5F50007E8801 /* User.swift in Sources */,
+				524FC72B28FE5817007E8801 /* LoginViewController.swift in Sources */,
+				52FCF44328FE2A9800C0FDCB /* AppDelegate.swift in Sources */,
+				524FC72D28FE5825007E8801 /* SignUpViewController.swift in Sources */,
+				52FCF44528FE2A9800C0FDCB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		815BFFC8290C793B0053D8C4 /* Sources */ = {
+		52FCF45128FE2A9900C0FDCB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				815BFFD1290C793B0053D8C4 /* carpanyTests.swift in Sources */,
+				52FCF45A28FE2A9900C0FDCB /* CarpanyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		815BFFD2290C793B0053D8C4 /* Sources */ = {
+		52FCF45B28FE2A9900C0FDCB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				815BFFDB290C793B0053D8C4 /* carpanyUITests.swift in Sources */,
-				815BFFDD290C793B0053D8C4 /* carpanyUITestsLaunchTests.swift in Sources */,
+				52FCF46428FE2A9900C0FDCB /* CarpanyUITests.swift in Sources */,
+				52FCF46628FE2A9900C0FDCB /* CarpanyUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		815BFFCE290C793B0053D8C4 /* PBXTargetDependency */ = {
+		52FCF45728FE2A9900C0FDCB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 815BFFB5290C793A0053D8C4 /* carpany */;
-			targetProxy = 815BFFCD290C793B0053D8C4 /* PBXContainerItemProxy */;
+			target = 52FCF43E28FE2A9800C0FDCB /* Carpany */;
+			targetProxy = 52FCF45628FE2A9900C0FDCB /* PBXContainerItemProxy */;
 		};
-		815BFFD8290C793B0053D8C4 /* PBXTargetDependency */ = {
+		52FCF46128FE2A9900C0FDCB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 815BFFB5290C793A0053D8C4 /* carpany */;
-			targetProxy = 815BFFD7290C793B0053D8C4 /* PBXContainerItemProxy */;
+			target = 52FCF43E28FE2A9800C0FDCB /* Carpany */;
+			targetProxy = 52FCF46028FE2A9900C0FDCB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		815BFFBF290C793A0053D8C4 /* Main.storyboard */ = {
+		52FCF44828FE2A9800C0FDCB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				815BFFC0290C793A0053D8C4 /* Base */,
+				52FCF44928FE2A9800C0FDCB /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		815BFFC4290C793B0053D8C4 /* LaunchScreen.storyboard */ = {
+		52FCF44D28FE2A9900C0FDCB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				815BFFC5290C793B0053D8C4 /* Base */,
+				52FCF44E28FE2A9900C0FDCB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -468,7 +484,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		815BFFDE290C793B0053D8C4 /* Debug */ = {
+		52FCF46728FE2A9900C0FDCB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -528,7 +544,7 @@
 			};
 			name = Debug;
 		};
-		815BFFDF290C793B0053D8C4 /* Release */ = {
+		52FCF46828FE2A9900C0FDCB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -582,29 +598,28 @@
 			};
 			name = Release;
 		};
-		815BFFE1290C793B0053D8C4 /* Debug */ = {
+		52FCF46A28FE2A9900C0FDCB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8644C6F31C16AD047E738ABE /* Pods-carpany.debug.xcconfig */;
+			baseConfigurationReference = F9C0A19972F7AE9804620539 /* Pods-Carpany.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SK9N96XN4K;
+				DEVELOPMENT_TEAM = 8T742VG7ZG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = carpany/Info.plist;
+				INFOPLIST_FILE = Carpany/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.richard.carpany;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttdo19.Carpany;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -612,29 +627,28 @@
 			};
 			name = Debug;
 		};
-		815BFFE2290C793B0053D8C4 /* Release */ = {
+		52FCF46B28FE2A9900C0FDCB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E31D474DE624EFBF788A610D /* Pods-carpany.release.xcconfig */;
+			baseConfigurationReference = BDE6AE8D0AC834020594A50E /* Pods-Carpany.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SK9N96XN4K;
+				DEVELOPMENT_TEAM = 8T742VG7ZG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = carpany/Info.plist;
+				INFOPLIST_FILE = Carpany/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.richard.carpany;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttdo19.Carpany;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -642,126 +656,126 @@
 			};
 			name = Release;
 		};
-		815BFFE4290C793B0053D8C4 /* Debug */ = {
+		52FCF46D28FE2A9900C0FDCB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42BE527A4529FF5BAC1B16D1 /* Pods-carpanyTests.debug.xcconfig */;
+			baseConfigurationReference = 9D8A989E194167C70C18AC70 /* Pods-CarpanyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SK9N96XN4K;
+				DEVELOPMENT_TEAM = 8T742VG7ZG;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.richard.carpanyTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttdo19.CarpanyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/carpany.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/carpany";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Carpany.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Carpany";
 			};
 			name = Debug;
 		};
-		815BFFE5290C793B0053D8C4 /* Release */ = {
+		52FCF46E28FE2A9900C0FDCB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EED3AF48EFB03CEDD43E870 /* Pods-carpanyTests.release.xcconfig */;
+			baseConfigurationReference = EFC6B575B3394853C4E6F8FA /* Pods-CarpanyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SK9N96XN4K;
+				DEVELOPMENT_TEAM = 8T742VG7ZG;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.richard.carpanyTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttdo19.CarpanyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/carpany.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/carpany";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Carpany.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Carpany";
 			};
 			name = Release;
 		};
-		815BFFE7290C793B0053D8C4 /* Debug */ = {
+		52FCF47028FE2A9900C0FDCB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2198A1FB18FC156F2429626 /* Pods-carpany-carpanyUITests.debug.xcconfig */;
+			baseConfigurationReference = 5ED8A93F2DA2FB1089F01EE9 /* Pods-Carpany-CarpanyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SK9N96XN4K;
+				DEVELOPMENT_TEAM = 8T742VG7ZG;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.richard.carpanyUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttdo19.CarpanyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = carpany;
+				TEST_TARGET_NAME = Carpany;
 			};
 			name = Debug;
 		};
-		815BFFE8290C793B0053D8C4 /* Release */ = {
+		52FCF47128FE2A9900C0FDCB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6267818DCCDF4341598BCCEC /* Pods-carpany-carpanyUITests.release.xcconfig */;
+			baseConfigurationReference = 1C52F2EAEDBC8568AEF04595 /* Pods-Carpany-CarpanyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SK9N96XN4K;
+				DEVELOPMENT_TEAM = 8T742VG7ZG;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.richard.carpanyUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttdo19.CarpanyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = carpany;
+				TEST_TARGET_NAME = Carpany;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		815BFFB1290C793A0053D8C4 /* Build configuration list for PBXProject "carpany" */ = {
+		52FCF43A28FE2A9800C0FDCB /* Build configuration list for PBXProject "Carpany" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				815BFFDE290C793B0053D8C4 /* Debug */,
-				815BFFDF290C793B0053D8C4 /* Release */,
+				52FCF46728FE2A9900C0FDCB /* Debug */,
+				52FCF46828FE2A9900C0FDCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		815BFFE0290C793B0053D8C4 /* Build configuration list for PBXNativeTarget "carpany" */ = {
+		52FCF46928FE2A9900C0FDCB /* Build configuration list for PBXNativeTarget "Carpany" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				815BFFE1290C793B0053D8C4 /* Debug */,
-				815BFFE2290C793B0053D8C4 /* Release */,
+				52FCF46A28FE2A9900C0FDCB /* Debug */,
+				52FCF46B28FE2A9900C0FDCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		815BFFE3290C793B0053D8C4 /* Build configuration list for PBXNativeTarget "carpanyTests" */ = {
+		52FCF46C28FE2A9900C0FDCB /* Build configuration list for PBXNativeTarget "CarpanyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				815BFFE4290C793B0053D8C4 /* Debug */,
-				815BFFE5290C793B0053D8C4 /* Release */,
+				52FCF46D28FE2A9900C0FDCB /* Debug */,
+				52FCF46E28FE2A9900C0FDCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		815BFFE6290C793B0053D8C4 /* Build configuration list for PBXNativeTarget "carpanyUITests" */ = {
+		52FCF46F28FE2A9900C0FDCB /* Build configuration list for PBXNativeTarget "CarpanyUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				815BFFE7290C793B0053D8C4 /* Debug */,
-				815BFFE8290C793B0053D8C4 /* Release */,
+				52FCF47028FE2A9900C0FDCB /* Debug */,
+				52FCF47128FE2A9900C0FDCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 815BFFAE290C793A0053D8C4 /* Project object */;
+	rootObject = 52FCF43728FE2A9800C0FDCB /* Project object */;
 }
