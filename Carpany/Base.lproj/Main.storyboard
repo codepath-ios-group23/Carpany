@@ -265,7 +265,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="male-symbols" translatesAutoresizingMaskIntoConstraints="NO" id="ssj-A8-PlQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="male-symbol" translatesAutoresizingMaskIntoConstraints="NO" id="ssj-A8-PlQ">
                                 <rect key="frame" x="160" y="121" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="9g6-Ah-ObB"/>
@@ -365,7 +365,7 @@
         <image name="icons8-add-image-50" width="50" height="50"/>
         <image name="icons8-user-67" width="67" height="67"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <image name="male-symbols" width="1568" height="1570"/>
+        <image name="male-symbol" width="1568" height="1570"/>
         <image name="map" catalog="system" width="128" height="112"/>
         <image name="profile" width="1280" height="1280"/>
         <systemColor name="systemBackgroundColor">
