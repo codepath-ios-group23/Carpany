@@ -1,0 +1,6 @@
+framework module Pods_CarpanyTests {
+  umbrella header "Pods-CarpanyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
