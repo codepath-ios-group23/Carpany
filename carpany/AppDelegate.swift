@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  carpany
+//  Carpany
 //
-//  Created by Richard Zhang on 10/28/22.
+//  Created by Trang Do on 10/17/22.
 //
 
 import UIKit
@@ -11,14 +11,17 @@ import Parse
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let parseConfig = ParseClientConfiguration {
-                $0.applicationId = "4y8c1mWxnLraCttWalDFfGyS6S4yoNDmCztQtCyc" // <- UPDATE
-                $0.clientKey = "TcC0tx8FHeNykdo3tU9guOf69JmmjSSlAZmOPhhc" // <- UPDATE
-                $0.server = "https://parseapi.back4app.com"
-        }
-        Parse.initialize(with: parseConfig)
+                    $0.applicationId = "4y8c1mWxnLraCttWalDFfGyS6S4yoNDmCztQtCyc"
+                    $0.clientKey = "TcC0tx8FHeNykdo3tU9guOf69JmmjSSlAZmOPhhc"
+                    $0.server = "https://parseapi.back4app.com/"
+            }
+            Parse.initialize(with: parseConfig)
+        
         return true
     }
 

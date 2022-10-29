@@ -2,10 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "container:carpany.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:carpany.xcodeproj">
+      location = "group:Carpany.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
