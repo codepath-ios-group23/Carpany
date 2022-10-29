@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_carpany_carpanyUITests : NSObject
+@interface PodsDummy_Pods_Carpany_CarpanyUITests : NSObject
 @end
-@implementation PodsDummy_Pods_carpany_carpanyUITests
+@implementation PodsDummy_Pods_Carpany_CarpanyUITests
 @end
