@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_carpany_carpanyUITestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_carpany_carpanyUITestsVersionString[];
+FOUNDATION_EXPORT double Pods_Carpany_CarpanyUITestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Carpany_CarpanyUITestsVersionString[];
 
