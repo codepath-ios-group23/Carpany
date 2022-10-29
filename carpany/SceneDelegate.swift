@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  carpany
+//  Carpany
 //
-//  Created by Richard Zhang on 10/28/22.
+//  Created by Trang Do on 10/17/22.
 //
 
 import UIKit
