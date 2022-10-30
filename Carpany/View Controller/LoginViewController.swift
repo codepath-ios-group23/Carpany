@@ -22,8 +22,6 @@ class LoginViewController: UIViewController {
     }
     
     func setupPlaceHolder() {
-        usernameField.autocorrectionType = .no
-        passwordField.autocorrectionType = .no
         let usernamePlaceholderText = NSAttributedString(string: "Username",
                                                          attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         usernameField.attributedPlaceholder = usernamePlaceholderText

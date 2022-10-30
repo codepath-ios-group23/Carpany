@@ -138,7 +138,7 @@ Optional:
 <img src="https://i.imgur.com/sgzduCj.png" width=600>
 
 ## Interactive Prototype
-<img src="https://i.imgur.com/A272SSO.gif" width=600>
+<img src="https://i.imgur.com/A272SSO.gif" width=300>
 
 ## Schema 
 
@@ -246,11 +246,3 @@ Optional:
       - (Filter/POST) Show existing favorite cars with conditions3
       - (Delete) Delete existing owned car item object
 
-## Milestone1
-- [x] User can login(required)
-- [x] Create new accounts before login(required)
-- [x] User Profile First Design(required)
-- [x] Search Tab Table View created(required)
-
-## Video Walkthrough
-<img src="https://i.imgur.com/Eg4h7Ij.gif" width=400>

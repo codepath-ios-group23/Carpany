@@ -1,14 +1,14 @@
 //
-//  carpanyTests.swift
-//  carpanyTests
+//  CarpanyTests.swift
+//  CarpanyTests
 //
-//  Created by Richard Zhang on 10/28/22.
+//  Created by Trang Do on 10/17/22.
 //
 
 import XCTest
-@testable import carpany
+@testable import Carpany
 
-final class carpanyTests: XCTestCase {
+final class CarpanyTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
