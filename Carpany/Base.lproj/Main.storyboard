@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -196,18 +197,33 @@
         <!--Map-->
         <scene sceneID="kyT-4m-gEy">
             <objects>
-                <viewController id="hA3-9J-lJd" sceneMemberID="viewController">
+                <viewController id="hA3-9J-lJd" customClass="MapViewController" customModule="Carpany" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wH2-6x-1jc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfZ-6b-5Mw">
+                                <rect key="frame" x="0.0" y="47" width="390" height="714"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ekK-l4-AYG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KfZ-6b-5Mw" firstAttribute="leading" secondItem="ekK-l4-AYG" secondAttribute="leading" id="2qs-kh-fKp"/>
+                            <constraint firstItem="KfZ-6b-5Mw" firstAttribute="top" secondItem="ekK-l4-AYG" secondAttribute="top" id="94a-JZ-3Yj"/>
+                            <constraint firstItem="ekK-l4-AYG" firstAttribute="bottom" secondItem="KfZ-6b-5Mw" secondAttribute="bottom" id="HLJ-bC-4BW"/>
+                            <constraint firstItem="ekK-l4-AYG" firstAttribute="trailing" secondItem="KfZ-6b-5Mw" secondAttribute="trailing" id="iRc-9b-58v"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="P2A-zE-BNN"/>
+                    <connections>
+                        <outlet property="mapView" destination="KfZ-6b-5Mw" id="jkM-Hc-rdm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4PD-eg-kc9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1235" y="1474"/>
+            <point key="canvasLocation" x="1233.8461538461538" y="1473.6966824644549"/>
         </scene>
         <!--Search-->
         <scene sceneID="zlc-Bn-z2O">
