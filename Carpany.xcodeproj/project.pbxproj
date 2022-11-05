@@ -24,6 +24,7 @@
 		52FCF46428FE2A9900C0FDCB /* CarpanyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCF46328FE2A9900C0FDCB /* CarpanyUITests.swift */; };
 		52FCF46628FE2A9900C0FDCB /* CarpanyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCF46528FE2A9900C0FDCB /* CarpanyUITestsLaunchTests.swift */; };
 		56887EEBAAA198B4988A2121 /* Pods_Carpany_CarpanyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C1045C8A0C80AA5A7D63ED /* Pods_Carpany_CarpanyUITests.framework */; };
+		81689463291635EC00250314 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 81689462291635EC00250314 /* README.md */; };
 		81B5B6E9290CBEC10092C254 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B5B6E8290CBEC10092C254 /* ProfileViewController.swift */; };
 		81F8CB7C2915F3AC00F9623F /* GarageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F8CB7B2915F3AC00F9623F /* GarageCell.swift */; };
 		81F8CB802915F59C00F9623F /* GarageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F8CB7F2915F59C00F9623F /* GarageViewController.swift */; };
@@ -72,6 +73,7 @@
 		52FCF46328FE2A9900C0FDCB /* CarpanyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarpanyUITests.swift; sourceTree = "<group>"; };
 		52FCF46528FE2A9900C0FDCB /* CarpanyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarpanyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5ED8A93F2DA2FB1089F01EE9 /* Pods-Carpany-CarpanyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carpany-CarpanyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Carpany-CarpanyUITests/Pods-Carpany-CarpanyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		81689462291635EC00250314 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		81B5B6E8290CBEC10092C254 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		81F8CB7B2915F3AC00F9623F /* GarageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageCell.swift; sourceTree = "<group>"; };
 		81F8CB7F2915F59C00F9623F /* GarageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		52FCF43628FE2A9800C0FDCB = {
 			isa = PBXGroup;
 			children = (
+				81689462291635EC00250314 /* README.md */,
 				52FCF44128FE2A9800C0FDCB /* Carpany */,
 				52FCF45828FE2A9900C0FDCB /* CarpanyTests */,
 				52FCF46228FE2A9900C0FDCB /* CarpanyUITests */,
@@ -325,6 +328,7 @@
 			files = (
 				52FCF44F28FE2A9900C0FDCB /* LaunchScreen.storyboard in Resources */,
 				52FCF44C28FE2A9900C0FDCB /* Assets.xcassets in Resources */,
+				81689463291635EC00250314 /* README.md in Resources */,
 				52FCF44A28FE2A9800C0FDCB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
