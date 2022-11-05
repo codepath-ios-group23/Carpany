@@ -819,7 +819,7 @@
 		086A787568A77C5C54E91A9D025F3A2A /* ParsePushStatusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParsePushStatusable.swift; path = Sources/ParseSwift/Objects/ParsePushStatusable.swift; sourceTree = "<group>"; };
 		088DAF0D54986242602791DE153362BC /* PFObjectUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObjectUtilities.m; path = Parse/Parse/Internal/Object/Utilities/PFObjectUtilities.m; sourceTree = "<group>"; };
 		0891EA65DEA4722DA3470E7232CDF039 /* HTTPHeaders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPHeaders.swift; path = Source/HTTPHeaders.swift; sourceTree = "<group>"; };
-		09ADDEB4C1D90BADDD9A4DDF55FCC013 /* Pods-Carpany */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Carpany"; path = Pods_Carpany.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09ADDEB4C1D90BADDD9A4DDF55FCC013 /* Pods_Carpany.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carpany.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D3F363B282C3A0EA6A6B18EE557480 /* PFAnalyticsController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnalyticsController.h; path = Parse/Parse/Internal/Analytics/Controller/PFAnalyticsController.h; sourceTree = "<group>"; };
 		0AAB45028EA6859301240142AC3ACAFF /* BFExecutor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFExecutor.m; path = Bolts/Common/BFExecutor.m; sourceTree = "<group>"; };
 		0AF78E8525727BEB87857CB3C599DAA6 /* ParseFileTransferable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParseFileTransferable.swift; path = Sources/ParseSwift/Protocols/ParseFileTransferable.swift; sourceTree = "<group>"; };
@@ -1661,7 +1661,7 @@
 				0652F2476C7C87C6C0F6CB68072EA25F /* Parse */,
 				ED7ADA84A7005589821D254428CD2D26 /* Parse.bundle */,
 				B8C80651F5F5895F24A8BBF82A29B178 /* ParseSwift */,
-				09ADDEB4C1D90BADDD9A4DDF55FCC013 /* Pods-Carpany */,
+				09ADDEB4C1D90BADDD9A4DDF55FCC013 /* Pods_Carpany.framework */,
 				1106CF3CB78A4AFF3D55B2D2B7FF409E /* Pods-Carpany-CarpanyUITests */,
 				1FEA5F7DE482259C3273CF72B706A72C /* Pods-CarpanyTests */,
 			);
@@ -2859,7 +2859,7 @@
 			);
 			name = "Pods-Carpany";
 			productName = Pods_Carpany;
-			productReference = 09ADDEB4C1D90BADDD9A4DDF55FCC013 /* Pods-Carpany */;
+			productReference = 09ADDEB4C1D90BADDD9A4DDF55FCC013 /* Pods_Carpany.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		0A9A78C28F4DCF5CB2B299C9B01770E7 /* Pods-Carpany-CarpanyUITests */ = {
