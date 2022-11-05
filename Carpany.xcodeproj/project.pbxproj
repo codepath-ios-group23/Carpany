@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,8 @@
 		52FCF46628FE2A9900C0FDCB /* CarpanyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCF46528FE2A9900C0FDCB /* CarpanyUITestsLaunchTests.swift */; };
 		56887EEBAAA198B4988A2121 /* Pods_Carpany_CarpanyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C1045C8A0C80AA5A7D63ED /* Pods_Carpany_CarpanyUITests.framework */; };
 		81B5B6E9290CBEC10092C254 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B5B6E8290CBEC10092C254 /* ProfileViewController.swift */; };
+		81F8CB7C2915F3AC00F9623F /* GarageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F8CB7B2915F3AC00F9623F /* GarageCell.swift */; };
+		81F8CB802915F59C00F9623F /* GarageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F8CB7F2915F59C00F9623F /* GarageViewController.swift */; };
 		CB329E13C3F097AB313DC85D /* Pods_CarpanyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5C2559C5666AAD00CA175 /* Pods_CarpanyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		52FCF46528FE2A9900C0FDCB /* CarpanyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarpanyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5ED8A93F2DA2FB1089F01EE9 /* Pods-Carpany-CarpanyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carpany-CarpanyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Carpany-CarpanyUITests/Pods-Carpany-CarpanyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		81B5B6E8290CBEC10092C254 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		81F8CB7B2915F3AC00F9623F /* GarageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageCell.swift; sourceTree = "<group>"; };
+		81F8CB7F2915F59C00F9623F /* GarageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageViewController.swift; sourceTree = "<group>"; };
 		9D8A989E194167C70C18AC70 /* Pods-CarpanyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarpanyTests.debug.xcconfig"; path = "Target Support Files/Pods-CarpanyTests/Pods-CarpanyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A246B0AA5B09482180965380 /* Pods_Carpany.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carpany.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE6AE8D0AC834020594A50E /* Pods-Carpany.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carpany.release.xcconfig"; path = "Target Support Files/Pods-Carpany/Pods-Carpany.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 				525B9CE4290ECAC000514AB3 /* MapViewController.swift */,
 				52A791D5291358D900228AE8 /* SearchMapViewController.swift */,
 				52A791D729135BEE00228AE8 /* Cell */,
+				81F8CB7B2915F3AC00F9623F /* GarageCell.swift */,
+				81F8CB7F2915F59C00F9623F /* GarageViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -290,7 +296,7 @@
 				};
 			};
 			buildConfigurationList = 52FCF43A28FE2A9800C0FDCB /* Build configuration list for PBXProject "Carpany" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -447,6 +453,8 @@
 				52A791D929135C2100228AE8 /* SearchTableViewCell.swift in Sources */,
 				81B5B6E9290CBEC10092C254 /* ProfileViewController.swift in Sources */,
 				524FC72F28FE5F50007E8801 /* User.swift in Sources */,
+				81F8CB802915F59C00F9623F /* GarageViewController.swift in Sources */,
+				81F8CB7C2915F3AC00F9623F /* GarageCell.swift in Sources */,
 				524FC72B28FE5817007E8801 /* LoginViewController.swift in Sources */,
 				52A791D6291358D900228AE8 /* SearchMapViewController.swift in Sources */,
 				52FCF44328FE2A9800C0FDCB /* AppDelegate.swift in Sources */,
@@ -630,7 +638,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8T742VG7ZG;
+				DEVELOPMENT_TEAM = SK9N96XN4K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Carpany/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -638,7 +646,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -658,9 +666,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8T742VG7ZG;
+				DEVELOPMENT_TEAM = SK9N96XN4K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Carpany/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -668,7 +677,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -676,6 +685,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttdo19.Carpany;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
