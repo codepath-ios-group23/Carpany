@@ -25,7 +25,7 @@ class GarageViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     @IBAction func onReturn(_ sender: Any) {
-        self.performSegue(withIdentifier: "return", sender: nil)
+        self.dismiss(animated: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
