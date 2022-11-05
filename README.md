@@ -254,3 +254,15 @@ Optional:
 
 ## Video Walkthrough
 <img src="https://i.imgur.com/Eg4h7Ij.gif" width=400>
+
+## Milestone2
+- [x] User can auto login/logout(required)
+- [x] User Profile could change according to gender(required)
+- [x] Create user garage table views(required)
+- [x] Build database and upload it to back4app(required)
+- [x] Upload image files into server and connect through api(required)
+- [x] Build map for self-loaction and location search(required)
+
+
+## Video Walkthrough2
+<img src="https://i.imgur.com/YvA8IY3.gif" width=400>
