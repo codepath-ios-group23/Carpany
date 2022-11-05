@@ -9,11 +9,11 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, SearchMapViewControllerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
-    
+    var selectedPin: MKPlacemark? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +25,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         if (locationManager.authorizationStatus.rawValue == 3) {
             locationManager.startUpdatingLocation()
         }
-        
         locationManager.requestAlwaysAuthorization()
         
+        //pass the mapView from MapViewController to SearchMapViewController
+//        SearchMapViewController.mapView = mapView
+//        SearchMapViewController.handleMapSearchDelegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -81,15 +83,31 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         print("Error - locationManager: \(error.localizedDescription)")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toSearchMap" {
+            let SearchMapVC = segue.destination as! SearchMapViewController
+            SearchMapVC.delegate = self
+        }
     }
-    */
-
+    
+    func dropPinZoomIn(controller: SearchMapViewController, placemark: MKPlacemark) {
+        selectedPin = placemark
+        //clear existing pins
+//        mapView.removeAnnotation(annotation)
+        let searchAnnotation = MKPointAnnotation()
+        searchAnnotation.coordinate = placemark.coordinate
+        searchAnnotation.title = placemark.name
+        if let city = placemark.locality, let state = placemark.administrativeArea {
+            searchAnnotation.subtitle = "\(city) \(state)"
+        }
+        mapView.addAnnotation(searchAnnotation)
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: placemark.coordinate, span: span)
+        mapView.setRegion(region, animated: true)
+    }
+    
+    @IBAction func unwindToMapView(sender: UIStoryboardSegue) {
+        
+    }
 }
+
