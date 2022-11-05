@@ -18,7 +18,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileImage.layer.cornerRadius = profileImage.frame.width / 2
+        profileImage.layer.cornerRadius = profileImage.frame.width / 2 
         statusLabel.layer.masksToBounds = true
         descriptionTextView.layer.masksToBounds = true
         statusLabel.layer.cornerRadius = 5
@@ -29,11 +29,21 @@ class ProfileViewController: UIViewController {
         nicknameLabel.text = user.username
         descriptionTextView.text = user["bio"] as? String
         
+        if (user["gender"] as! Bool == true) {
+            genderImage.image = UIImage(named: "male-symbol.png")
+        } else {
+            genderImage.image = UIImage(named: "female-symbol.png")
+        }
+        
         let imageFile = user["profileImage"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
         
         profileImage.af.setImage(withURL: url)
+    }
+    
+    @IBAction func onEnterGarage(_ sender: Any) {
+        self.performSegue(withIdentifier: "enterGarage", sender: nil)
     }
     
 
