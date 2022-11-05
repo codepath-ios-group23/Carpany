@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import Parse
+import AlamofireImage
 
 class GarageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var cars = [PFObject]()
+    var selectedCar: PFObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +23,28 @@ class GarageViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
     @IBAction func onReturn(_ sender: Any) {
-        self.performSegue(withIdentifier: "return", sender: nil)
+        self.dismiss(animated: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let user = PFUser.current()!
+        let cars = user["cars"] as? Array<String>
+        for car in cars ?? [] {
+            let query = PFQuery(className: "Car_table")
+            query.getObjectInBackground(withId: car) { (carItem, error) in
+                if carItem != nil {
+                    let maker = carItem!["Maker"] as! String
+                    let genmodel = carItem!["Genmodel"] as! String
+                    let genmodelId = carItem!["Genmodel_ID"] as! String
+                } else {
+                    print("Noting found!")
+                }
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
