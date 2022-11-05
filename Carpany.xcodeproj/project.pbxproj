@@ -27,6 +27,7 @@
 		81B5B6E9290CBEC10092C254 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B5B6E8290CBEC10092C254 /* ProfileViewController.swift */; };
 		81F8CB7C2915F3AC00F9623F /* GarageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F8CB7B2915F3AC00F9623F /* GarageCell.swift */; };
 		81F8CB802915F59C00F9623F /* GarageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F8CB7F2915F59C00F9623F /* GarageViewController.swift */; };
+		B845E7EC29162A6500757229 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B845E7EB29162A6500757229 /* MainViewController.swift */; };
 		CB329E13C3F097AB313DC85D /* Pods_CarpanyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5C2559C5666AAD00CA175 /* Pods_CarpanyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		81F8CB7F2915F59C00F9623F /* GarageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageViewController.swift; sourceTree = "<group>"; };
 		9D8A989E194167C70C18AC70 /* Pods-CarpanyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarpanyTests.debug.xcconfig"; path = "Target Support Files/Pods-CarpanyTests/Pods-CarpanyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A246B0AA5B09482180965380 /* Pods_Carpany.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carpany.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B845E7EB29162A6500757229 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BDE6AE8D0AC834020594A50E /* Pods-Carpany.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carpany.release.xcconfig"; path = "Target Support Files/Pods-Carpany/Pods-Carpany.release.xcconfig"; sourceTree = "<group>"; };
 		EFC6B575B3394853C4E6F8FA /* Pods-CarpanyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarpanyTests.release.xcconfig"; path = "Target Support Files/Pods-CarpanyTests/Pods-CarpanyTests.release.xcconfig"; sourceTree = "<group>"; };
 		F9C0A19972F7AE9804620539 /* Pods-Carpany.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carpany.debug.xcconfig"; path = "Target Support Files/Pods-Carpany/Pods-Carpany.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				52FCF44D28FE2A9900C0FDCB /* LaunchScreen.storyboard */,
 				52FCF45028FE2A9900C0FDCB /* Info.plist */,
 				524FC72E28FE5F50007E8801 /* User.swift */,
+				B845E7EB29162A6500757229 /* MainViewController.swift */,
 			);
 			path = Carpany;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				52A791D929135C2100228AE8 /* SearchTableViewCell.swift in Sources */,
 				81B5B6E9290CBEC10092C254 /* ProfileViewController.swift in Sources */,
 				524FC72F28FE5F50007E8801 /* User.swift in Sources */,
+				B845E7EC29162A6500757229 /* MainViewController.swift in Sources */,
 				81F8CB802915F59C00F9623F /* GarageViewController.swift in Sources */,
 				81F8CB7C2915F3AC00F9623F /* GarageCell.swift in Sources */,
 				524FC72B28FE5817007E8801 /* LoginViewController.swift in Sources */,
