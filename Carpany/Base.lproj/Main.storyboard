@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -346,40 +346,100 @@
                         <outlet property="nicknameLabel" destination="Wtk-0R-rF7" id="gJl-hw-lZ5"/>
                         <outlet property="profileImage" destination="epr-H5-1CH" id="5Ix-U2-yPL"/>
                         <outlet property="statusLabel" destination="sZA-GW-BdD" id="bAf-Sc-zms"/>
-                        <segue destination="OFc-pv-kQs" kind="presentation" identifier="enterGarage" modalPresentationStyle="fullScreen" id="Hvl-z0-VTf"/>
+                        <segue destination="OFc-pv-kQs" kind="presentation" identifier="enterGarage" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Hvl-z0-VTf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HA9-gT-7MT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2776.9230769230767" y="1473.6966824644549"/>
         </scene>
-        <!--View Controller-->
+        <!--Garage View Controller-->
         <scene sceneID="P3X-Wv-H2b">
             <objects>
-                <viewController id="OFc-pv-kQs" sceneMemberID="viewController">
+                <viewController id="OFc-pv-kQs" customClass="GarageViewController" customModule="Carpany" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o8w-yl-ZkT">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hTD-Jy-fem">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hTD-Jy-fem">
+                                <rect key="frame" x="0.0" y="108" width="390" height="702"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mgC-H3-A6a">
-                                        <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GarageCell" rowHeight="183" id="mgC-H3-A6a" customClass="GarageCell" customModule="Carpany" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="183"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mgC-H3-A6a" id="cXx-mG-whB">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="183"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Porsche__Boxster__2019__Silver__71_6__726__image_19" translatesAutoresizingMaskIntoConstraints="NO" id="Iss-p5-o74">
+                                                    <rect key="frame" x="32" y="16" width="326" height="151"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Iss-p5-o74" secondAttribute="height" multiplier="175:86" id="Kq0-oY-AD0"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Iss-p5-o74" firstAttribute="top" secondItem="cXx-mG-whB" secondAttribute="top" constant="16" id="bCe-fj-eE5"/>
+                                                <constraint firstItem="Iss-p5-o74" firstAttribute="leading" secondItem="cXx-mG-whB" secondAttribute="leading" constant="32" id="dxD-ks-ehF"/>
+                                                <constraint firstAttribute="trailing" secondItem="Iss-p5-o74" secondAttribute="trailing" constant="32" id="hbK-rM-9Gb"/>
+                                                <constraint firstAttribute="bottom" secondItem="Iss-p5-o74" secondAttribute="bottom" constant="16" id="uEJ-Ph-5bs"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="carImage" destination="Iss-p5-o74" id="e7z-HG-dEA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Garage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JT-XA-HUb">
+                                <rect key="frame" x="0.0" y="32" width="390" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="FHT-cb-pgb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="40"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBt-Wr-se2">
+                                <rect key="frame" x="151" y="743.66666666666663" width="88" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Return">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onReturn:" destination="OFc-pv-kQs" eventType="touchUpInside" id="qD8-Ye-6JJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zmy-yA-DDH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hTD-Jy-fem" firstAttribute="trailing" secondItem="zmy-yA-DDH" secondAttribute="trailing" id="5uY-fv-UtP"/>
+                            <constraint firstItem="hTD-Jy-fem" firstAttribute="bottom" secondItem="zmy-yA-DDH" secondAttribute="bottom" id="EgS-mx-Z5h"/>
+                            <constraint firstItem="UBt-Wr-se2" firstAttribute="leading" secondItem="zmy-yA-DDH" secondAttribute="leading" constant="151" id="GRO-2Q-gS7"/>
+                            <constraint firstItem="5JT-XA-HUb" firstAttribute="top" secondItem="o8w-yl-ZkT" secondAttribute="top" constant="32" id="QhH-sJ-zQs"/>
+                            <constraint firstItem="zmy-yA-DDH" firstAttribute="bottom" secondItem="UBt-Wr-se2" secondAttribute="bottom" constant="32" id="Zdk-Eb-kwv"/>
+                            <constraint firstItem="hTD-Jy-fem" firstAttribute="leading" secondItem="zmy-yA-DDH" secondAttribute="leading" id="gIp-BC-skB"/>
+                            <constraint firstItem="hTD-Jy-fem" firstAttribute="top" secondItem="5JT-XA-HUb" secondAttribute="bottom" constant="8" symbolic="YES" id="ixC-Jt-6Y9"/>
+                            <constraint firstItem="5JT-XA-HUb" firstAttribute="trailing" secondItem="zmy-yA-DDH" secondAttribute="trailing" id="lse-Ty-OrJ"/>
+                            <constraint firstItem="5JT-XA-HUb" firstAttribute="leading" secondItem="zmy-yA-DDH" secondAttribute="leading" id="xRZ-eH-l3P"/>
+                            <constraint firstItem="zmy-yA-DDH" firstAttribute="trailing" secondItem="UBt-Wr-se2" secondAttribute="trailing" constant="151" id="yeI-Nf-njI"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="uIe-ci-ncI"/>
+                    <connections>
+                        <outlet property="tableView" destination="hTD-Jy-fem" id="FYq-oD-JNP"/>
+                        <segue destination="Scn-1n-29n" kind="presentation" identifier="return" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="hiX-jh-nDB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZcI-Hx-jUO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -423,9 +483,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xqa-9K-G1A"/>
+        <segue reference="Hvl-z0-VTf"/>
+        <segue reference="hiX-jh-nDB"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Porsche__Boxster__2019__Silver__71_6__726__image_19" width="300" height="300"/>
         <image name="car" catalog="system" width="128" height="95"/>
         <image name="garage-logo" width="1950" height="1950"/>
         <image name="house" catalog="system" width="128" height="104"/>
@@ -443,6 +505,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
