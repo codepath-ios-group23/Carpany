@@ -125,6 +125,7 @@
 				525B9CE4290ECAC000514AB3 /* MapViewController.swift */,
 				52A791D5291358D900228AE8 /* SearchMapViewController.swift */,
 				81F8CB7B2915F3AC00F9623F /* GarageCell.swift */,
+				52A791D729135BEE00228AE8 /* Cell */,
 				81F8CB7F2915F59C00F9623F /* GarageViewController.swift */,
 				52A791DA29183C9400228AE8 /* ResetPasswordViewController.swift */,
 				52A791D729135BEE00228AE8 /* Cell */,
@@ -135,6 +136,7 @@
 		52A791D729135BEE00228AE8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				81F8CB7B2915F3AC00F9623F /* GarageCell.swift */,
 				52A791D829135C2100228AE8 /* SearchTableViewCell.swift */,
 			);
 			path = Cell;
