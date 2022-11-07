@@ -365,20 +365,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="male-symbol" translatesAutoresizingMaskIntoConstraints="NO" id="ssj-A8-PlQ">
-                                <rect key="frame" x="160" y="121" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="9g6-Ah-ObB"/>
-                                    <constraint firstAttribute="width" constant="20" id="bTV-Le-tVJ"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" #happy " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZA-GW-BdD">
-                                <rect key="frame" x="188" y="120.99999999999999" width="66" height="19.333333333333329"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjo-kj-UYQ">
                                 <rect key="frame" x="16" y="191" width="358" height="370"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
@@ -401,21 +387,26 @@
                                     <action selector="onEnterGarage:" destination="neU-fg-6J9" eventType="touchUpInside" id="Zad-gY-ULM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" #happy " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZA-GW-BdD">
+                                <rect key="frame" x="160" y="120.99999999999999" width="66" height="19.333333333333329"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nLa-k8-88k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ssj-A8-PlQ" firstAttribute="top" secondItem="Wtk-0R-rF7" secondAttribute="bottom" constant="8" id="4fT-5S-Tqz"/>
                             <constraint firstItem="epr-H5-1CH" firstAttribute="leading" secondItem="nLa-k8-88k" secondAttribute="leading" constant="16" id="9qk-Z7-tAM"/>
                             <constraint firstItem="Vjo-kj-UYQ" firstAttribute="leading" secondItem="nLa-k8-88k" secondAttribute="leading" constant="16" id="AVg-Nk-AVn"/>
                             <constraint firstItem="Vjo-kj-UYQ" firstAttribute="top" secondItem="epr-H5-1CH" secondAttribute="bottom" constant="16" id="An0-6z-1he"/>
-                            <constraint firstItem="sZA-GW-BdD" firstAttribute="leading" secondItem="ssj-A8-PlQ" secondAttribute="trailing" constant="8" id="ORz-7A-JEJ"/>
-                            <constraint firstItem="sZA-GW-BdD" firstAttribute="top" secondItem="ssj-A8-PlQ" secondAttribute="top" id="PaT-18-MZn"/>
+                            <constraint firstItem="sZA-GW-BdD" firstAttribute="top" secondItem="Wtk-0R-rF7" secondAttribute="bottom" constant="8" id="DEH-Tw-y0k"/>
                             <constraint firstItem="epr-H5-1CH" firstAttribute="top" secondItem="nLa-k8-88k" secondAttribute="top" id="g7g-Wq-tBZ"/>
                             <constraint firstItem="RPJ-S7-zQI" firstAttribute="bottom" secondItem="nLa-k8-88k" secondAttribute="bottom" id="hRH-vk-5oX"/>
+                            <constraint firstItem="sZA-GW-BdD" firstAttribute="leading" secondItem="epr-H5-1CH" secondAttribute="trailing" constant="16" id="k8f-rD-q5R"/>
                             <constraint firstItem="Wtk-0R-rF7" firstAttribute="leading" secondItem="epr-H5-1CH" secondAttribute="trailing" constant="16" id="ruK-5P-GMx"/>
                             <constraint firstItem="nLa-k8-88k" firstAttribute="bottom" secondItem="Vjo-kj-UYQ" secondAttribute="bottom" constant="200" id="skn-4p-FLg"/>
-                            <constraint firstItem="ssj-A8-PlQ" firstAttribute="leading" secondItem="epr-H5-1CH" secondAttribute="trailing" constant="16" id="uRO-eN-Zon"/>
                             <constraint firstItem="nLa-k8-88k" firstAttribute="trailing" secondItem="Vjo-kj-UYQ" secondAttribute="trailing" constant="16" id="uvc-68-sKc"/>
                             <constraint firstItem="Wtk-0R-rF7" firstAttribute="top" secondItem="nLa-k8-88k" secondAttribute="top" constant="32" id="wZ9-dT-fUD"/>
                             <constraint firstItem="nLa-k8-88k" firstAttribute="trailing" secondItem="RPJ-S7-zQI" secondAttribute="trailing" constant="16" id="z1T-oJ-9dO"/>
@@ -425,7 +416,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="descriptionTextView" destination="Vjo-kj-UYQ" id="pP6-LF-kY1"/>
-                        <outlet property="genderImage" destination="ssj-A8-PlQ" id="GfH-wa-SV9"/>
                         <outlet property="nicknameLabel" destination="Wtk-0R-rF7" id="gJl-hw-lZ5"/>
                         <outlet property="profileImage" destination="epr-H5-1CH" id="5Ix-U2-yPL"/>
                         <outlet property="statusLabel" destination="sZA-GW-BdD" id="bAf-Sc-zms"/>
@@ -458,7 +448,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Porsche__Boxster__2019__Silver__71_6__726__image_19" translatesAutoresizingMaskIntoConstraints="NO" id="Iss-p5-o74">
                                                     <rect key="frame" x="32" y="16" width="326" height="151"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="Iss-p5-o74" secondAttribute="height" multiplier="175:86" id="Kq0-oY-AD0"/>
+                                                        <constraint firstAttribute="width" secondItem="Iss-p5-o74" secondAttribute="height" multiplier="175:125" id="Kq0-oY-AD0"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -596,7 +586,6 @@
         <image name="icons8-add-image-50" width="50" height="50"/>
         <image name="icons8-user-67" width="67" height="67"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <image name="male-symbol" width="1568" height="1570"/>
         <image name="map" catalog="system" width="128" height="112"/>
         <image name="profile" width="1280" height="1280"/>
         <systemColor name="systemBackgroundColor">

@@ -12,7 +12,6 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nicknameLabel: UILabel!
-    @IBOutlet weak var genderImage: UIImageView!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     
@@ -28,12 +27,6 @@ class ProfileViewController: UIViewController {
         let user = PFUser.current()!
         nicknameLabel.text = user.username
         descriptionTextView.text = user["bio"] as? String
-        
-        if (user["gender"] as! Bool == true) {
-            genderImage.image = UIImage(named: "male-symbol.png")
-        } else {
-            genderImage.image = UIImage(named: "female-symbol.png")
-        }
         
         let imageFile = user["profileImage"] as! PFFileObject
         let urlString = imageFile.url!
