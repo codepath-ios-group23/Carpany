@@ -5,6 +5,7 @@
 //  Created by CYH on 11/6/22.
 //
 
+
 import UIKit
 
 class CarTableViewController: UITableViewController {
@@ -20,13 +21,11 @@ class CarTableViewController: UITableViewController {
         searchController.searchResultsUpdater = self
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
-
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
