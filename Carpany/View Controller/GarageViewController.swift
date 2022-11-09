@@ -14,17 +14,17 @@ class GarageViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var tableView: UITableView!
     
     var cars = [PFObject]()
+    var carsList = [PFObject]()
     var images = [PFObject?]()
     var selectedCar: PFObject!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadCars()
-
-        // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        self.getCarItem()
+        self.loadCars()
     }
     
     @IBAction func onReturn(_ sender: Any) {
@@ -33,49 +33,26 @@ class GarageViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
 //    override func viewWillAppear(_ animated: Bool) {
 //        super.viewWillAppear(animated)
-//
+//        self.getCarItem()
 //        self.loadCars()
 //    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        self.getCarItem()
         self.loadCars()
-        self.tableView.reloadData()
+        
     }
     
-    @objc func loadCars() {
+    func getCarItem() {
         let user = PFUser.current()!
         let cars = user["cars"] as? Array<String>
         for car in cars ?? [] {
-            let query = PFQuery(className: "Car_table")
+            let query = PFQuery(className: "Agg_car")
             query.getObjectInBackground(withId: car) { (carItem, error) in
                 if carItem != nil {
-                    let maker = carItem!["Maker"] as! String
-                    let genmodel = carItem!["Genmodel"] as! String
-                    let genmodelId = carItem!["Genmodel_ID"] as! String
-                    let color = carItem!["Color"] as! String
-                    print(maker)
-                    print(genmodel)
-                    print(genmodelId)
-                    print(color)
-                    
-                    let query2 = PFQuery(className: "image")
-                    query2.whereKey("Genmodel_ID", equalTo:genmodelId)
-                    query2.whereKey("Genmodel", equalTo:genmodel)
-                    query2.whereKey("Maker", equalTo:maker)
-                    query2.whereKey("Color", equalTo:color)
-                    
-                    query2.getFirstObjectInBackground() { (imageItem, error) in
-                        if imageItem != nil {
-                            self.cars.append(carItem!)
-                            self.images.append(imageItem)
-                            let imageName = imageItem!["Image_name"] as! String
-                            print(imageName)
-                        } else {
-                            self.images.append(nil)
-                            print("No preview")
-                        }
-                    }
+                    self.carsList.append(carItem!)
                 } else {
                     print("No cars found!")
                 }
@@ -83,15 +60,47 @@ class GarageViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
+    func loadCars() {
+        for car in carsList {
+            let maker = car["Maker"] as! String
+            let genmodel = car["Genmodel"] as! String
+            let genmodelId = car["Genmodel_ID"] as! String
+            print(maker)
+            print(genmodel)
+            print(genmodelId)
+            print()
+            
+            let query2 = PFQuery(className: "image")
+            query2.whereKey("Genmodel_ID", equalTo:genmodelId)
+            query2.whereKey("Genmodel", equalTo:genmodel)
+            query2.whereKey("Maker", equalTo:maker)
+            
+            query2.getFirstObjectInBackground() { [self] (imageItem, error) in
+                if imageItem != nil {
+                    self.images.append(imageItem)
+                    self.tableView.reloadData()
+                    print("Number of image: \(self.images.count)")
+                    let imageName = imageItem!["Image_name"] as! String
+                    print(imageName)
+                } else {
+                    self.images.append(nil)
+                    print("No preview")
+                }
+            }
+        }
+    }
+
+
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.cars.count
+        return self.images.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GarageCell") as! GarageCell
-        let imagess = self.images
-        cell.carImage.layer.cornerRadius = cell.carImage.frame.height / 2
-        if self.images[indexPath.row] != nil {
+        cell.carImage.layer.cornerRadius = 30
+ 
+        if images.count != 0 {
             let basicURL = "http://www.zhang-jihao.com/resized_DVM/"
             
             let maker = self.images[indexPath.row]!["Maker"] as! String
@@ -100,10 +109,11 @@ class GarageViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let color = self.images[indexPath.row]!["Color"] as! String
             let imageName = self.images[indexPath.row]!["Image_name"] as! String
             
-            let url = URL(string: basicURL + maker + "/" + genmodel + "/" + year + "/" + color + "/" + imageName)!
-            print(url)
+            let raw = basicURL + maker + "/" + genmodel + "/" + year + "/" + color + "/" + imageName
+            let link = raw.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             
-            cell.carImage.af.setImage(withURL: url)
+            let url = URL(string: link)
+            cell.carImage.af.setImage(withURL: url!)
         }
         return cell
     }
