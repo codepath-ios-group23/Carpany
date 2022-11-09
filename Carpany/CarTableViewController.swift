@@ -10,6 +10,10 @@ import UIKit
 
 class CarTableViewController: UITableViewController {
     
+ 
+  
+
+    
     let searchController = UISearchController(searchResultsController: nil)
     
     var currentCar: [String] = MockData.displayableCars
@@ -19,6 +23,8 @@ class CarTableViewController: UITableViewController {
         title = "Search"
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
+        
+     
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -35,14 +41,30 @@ class CarTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CarCell") as! CarCell
         cell.carLabel.text = currentCar[indexPath.row]
+        
+        
+    
+        
+        
+        
+        
+        
         return cell
     }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(currentCar[indexPath.row])
+    }
+    
+    
 
     
 
 }
 
 extension CarTableViewController: UISearchResultsUpdating {
+
+    
     func updateSearchResults(for searchController: UISearchController) {
         let searchedText = searchController.searchBar.text ?? ""
         
@@ -56,4 +78,7 @@ extension CarTableViewController: UISearchResultsUpdating {
 
 class CarCell: UITableViewCell{
     @IBOutlet weak var carLabel:UILabel!
+   
 }
+
+
