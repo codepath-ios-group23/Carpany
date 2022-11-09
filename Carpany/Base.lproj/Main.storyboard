@@ -8,6 +8,7 @@
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -506,21 +507,25 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjo-kj-UYQ">
                                 <rect key="frame" x="16" y="191" width="358" height="370"/>
-                                <color key="backgroundColor" red="0.95689469579999997" green="0.83528280259999999" blue="0.016264077280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" #happy " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZA-GW-BdD">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" #happy " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZA-GW-BdD">
                                 <rect key="frame" x="160" y="121" width="66" height="26"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="2Xa-9P-wTR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="JUr-Dg-dle" appends="YES" id="qxI-FC-cAd"/>
+                                </connections>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfu-TC-J1r">
                                 <rect key="frame" x="16" y="701" width="79" height="32"/>
@@ -588,8 +593,128 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HA9-gT-7MT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="JUr-Dg-dle">
+                    <connections>
+                        <segue destination="YdP-Lm-z1t" kind="presentation" identifier="selectStatus" modalPresentationStyle="fullScreen" id="s2L-ry-jjL"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2776.9230769230767" y="1473.6966824644549"/>
+        </scene>
+        <!--Status Grid View Controller-->
+        <scene sceneID="mq6-2C-e37">
+            <objects>
+                <viewController id="YdP-Lm-z1t" customClass="StatusGridViewController" customModule="Carpany" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BQH-Ah-SwD">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cBu-ha-en4">
+                                <rect key="frame" x="0.0" y="127" width="390" height="683"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JKj-U0-JJU">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="StatusGridCell" id="fy7-7E-b6j" customClass="StatusGridCell" customModule="Carpany" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kSq-2L-WQJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNT-aG-If5">
+                                                    <rect key="frame" x="8" y="8" width="112" height="112"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="lpI-TZ-8US"/>
+                                                    </constraints>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="#happy">
+                                                            <attributes>
+                                                                <font key="NSFont" size="16" name="Arial-BoldMT"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CNT-aG-If5" firstAttribute="leading" secondItem="kSq-2L-WQJ" secondAttribute="leading" constant="8" id="UV4-Zg-trj"/>
+                                                <constraint firstItem="CNT-aG-If5" firstAttribute="top" secondItem="kSq-2L-WQJ" secondAttribute="top" constant="8" id="moy-oc-M5M"/>
+                                                <constraint firstAttribute="bottom" secondItem="CNT-aG-If5" secondAttribute="bottom" constant="8" id="uup-GX-gnO"/>
+                                                <constraint firstAttribute="trailing" secondItem="CNT-aG-If5" secondAttribute="trailing" constant="8" id="zLI-G0-zhM"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="statusLabel" destination="CNT-aG-If5" id="H9g-ye-OsK"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLr-cX-p1M">
+                                <rect key="frame" x="0.0" y="47" width="390" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="w26-Kz-qU0"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Choose your status!">
+                                        <attributes>
+                                            <font key="NSFont" size="36" name="MarkerFelt-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYd-NN-0iv">
+                                <rect key="frame" x="154" y="736" width="84" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Cancel">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onCancel:" destination="YdP-Lm-z1t" eventType="touchUpInside" id="BZZ-9A-pOv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dgG-XL-vzD"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="kLr-cX-p1M" firstAttribute="top" secondItem="dgG-XL-vzD" secondAttribute="top" id="100-sv-Zbt"/>
+                            <constraint firstItem="cBu-ha-en4" firstAttribute="top" secondItem="kLr-cX-p1M" secondAttribute="bottom" id="18E-k4-LPE"/>
+                            <constraint firstItem="cBu-ha-en4" firstAttribute="leading" secondItem="dgG-XL-vzD" secondAttribute="leading" id="3zI-eH-C7z"/>
+                            <constraint firstItem="cBu-ha-en4" firstAttribute="trailing" secondItem="dgG-XL-vzD" secondAttribute="trailing" id="Rfz-hu-RIi"/>
+                            <constraint firstItem="cBu-ha-en4" firstAttribute="bottom" secondItem="dgG-XL-vzD" secondAttribute="bottom" id="bct-9k-vBT"/>
+                            <constraint firstItem="dgG-XL-vzD" firstAttribute="trailing" secondItem="kLr-cX-p1M" secondAttribute="trailing" id="gqQ-2z-rlD"/>
+                            <constraint firstItem="kLr-cX-p1M" firstAttribute="leading" secondItem="dgG-XL-vzD" secondAttribute="leading" id="hru-tl-4RV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QJU-jW-X7D"/>
+                    <connections>
+                        <outlet property="cancelBtn" destination="YYd-NN-0iv" id="DOr-2Q-fEL"/>
+                        <outlet property="collectionView" destination="cBu-ha-en4" id="Mgj-Ad-Ldl"/>
+                        <outlet property="titleLabel" destination="kLr-cX-p1M" id="cV2-dd-nq2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Je4-Ke-xtK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2776.9230769230767" y="2141.9431279620853"/>
         </scene>
         <!--Garage View Controller-->
         <scene sceneID="P3X-Wv-H2b">
@@ -600,7 +725,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hTD-Jy-fem">
-                                <rect key="frame" x="0.0" y="108" width="390" height="702"/>
+                                <rect key="frame" x="0.0" y="123" width="390" height="687"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GarageCell" rowHeight="183" id="mgC-H3-A6a" customClass="GarageCell" customModule="Carpany" customModuleProvider="target">
@@ -632,7 +757,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Garage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JT-XA-HUb">
-                                <rect key="frame" x="0.0" y="32" width="390" height="68"/>
+                                <rect key="frame" x="0.0" y="47" width="390" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="FHT-cb-pgb"/>
                                 </constraints>
@@ -664,7 +789,7 @@
                             <constraint firstItem="hTD-Jy-fem" firstAttribute="trailing" secondItem="zmy-yA-DDH" secondAttribute="trailing" id="5uY-fv-UtP"/>
                             <constraint firstItem="hTD-Jy-fem" firstAttribute="bottom" secondItem="zmy-yA-DDH" secondAttribute="bottom" id="EgS-mx-Z5h"/>
                             <constraint firstItem="UBt-Wr-se2" firstAttribute="leading" secondItem="zmy-yA-DDH" secondAttribute="leading" constant="151" id="GRO-2Q-gS7"/>
-                            <constraint firstItem="5JT-XA-HUb" firstAttribute="top" secondItem="o8w-yl-ZkT" secondAttribute="top" constant="32" id="QhH-sJ-zQs"/>
+                            <constraint firstItem="5JT-XA-HUb" firstAttribute="top" secondItem="zmy-yA-DDH" secondAttribute="top" id="QhH-sJ-zQs"/>
                             <constraint firstItem="zmy-yA-DDH" firstAttribute="bottom" secondItem="UBt-Wr-se2" secondAttribute="bottom" constant="32" id="Zdk-Eb-kwv"/>
                             <constraint firstItem="hTD-Jy-fem" firstAttribute="leading" secondItem="zmy-yA-DDH" secondAttribute="leading" id="gIp-BC-skB"/>
                             <constraint firstItem="hTD-Jy-fem" firstAttribute="top" secondItem="5JT-XA-HUb" secondAttribute="bottom" constant="8" symbolic="YES" id="ixC-Jt-6Y9"/>

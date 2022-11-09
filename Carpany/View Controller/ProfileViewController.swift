@@ -38,6 +38,8 @@ class ProfileViewController: UIViewController {
         let user = PFUser.current()!
         nicknameLabel.text = user.username
         descriptionTextView.text = user["bio"] as? String
+        statusLabel.text = user["status"] as? String
+        statusLabel.text = "  #" + statusLabel.text! + "  "
         
         let imageFile = user["profileImage"] as! PFFileObject
         let urlString = imageFile.url!
@@ -50,7 +52,17 @@ class ProfileViewController: UIViewController {
         self.performSegue(withIdentifier: "enterGarage", sender: nil)
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        changeStatus()
+    }
+    
+    
+    func changeStatus() {
+        let user = PFUser.current()!
+        statusLabel.text = user["status"] as? String
+        statusLabel.text = "  #" + statusLabel.text! + "  "
+    }
+    
     @IBAction func onLogout(_ sender: Any) {
         PFUser.logOut()
         let main = UIStoryboard(name: "Main", bundle: nil)
