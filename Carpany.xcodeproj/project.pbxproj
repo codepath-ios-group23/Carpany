@@ -15,6 +15,7 @@
 		5288C6885924DBDBA0D5A055 /* Pods_Carpany.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A246B0AA5B09482180965380 /* Pods_Carpany.framework */; };
 		52A791D6291358D900228AE8 /* SearchMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A791D5291358D900228AE8 /* SearchMapViewController.swift */; };
 		52A791D929135C2100228AE8 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A791D829135C2100228AE8 /* SearchTableViewCell.swift */; };
+		52A791DB29183C9400228AE8 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A791DA29183C9400228AE8 /* ResetPasswordViewController.swift */; };
 		52FCF44328FE2A9800C0FDCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCF44228FE2A9800C0FDCB /* AppDelegate.swift */; };
 		52FCF44528FE2A9800C0FDCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCF44428FE2A9800C0FDCB /* SceneDelegate.swift */; };
 		52FCF44A28FE2A9800C0FDCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FCF44828FE2A9800C0FDCB /* Main.storyboard */; };
@@ -24,9 +25,11 @@
 		52FCF46428FE2A9900C0FDCB /* CarpanyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCF46328FE2A9900C0FDCB /* CarpanyUITests.swift */; };
 		52FCF46628FE2A9900C0FDCB /* CarpanyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCF46528FE2A9900C0FDCB /* CarpanyUITestsLaunchTests.swift */; };
 		56887EEBAAA198B4988A2121 /* Pods_Carpany_CarpanyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C1045C8A0C80AA5A7D63ED /* Pods_Carpany_CarpanyUITests.framework */; };
+		812BCC26291AF6630021D63C /* StatusGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BCC25291AF6630021D63C /* StatusGridCell.swift */; };
+		812BCC28291AF6AB0021D63C /* StatusGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BCC27291AF6AB0021D63C /* StatusGridViewController.swift */; };
 		81689463291635EC00250314 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 81689462291635EC00250314 /* README.md */; };
+		818CFB352919B90C00A173DB /* GarageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CFB342919B90C00A173DB /* GarageCell.swift */; };
 		81B5B6E9290CBEC10092C254 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B5B6E8290CBEC10092C254 /* ProfileViewController.swift */; };
-		81F8CB7C2915F3AC00F9623F /* GarageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F8CB7B2915F3AC00F9623F /* GarageCell.swift */; };
 		81F8CB802915F59C00F9623F /* GarageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F8CB7F2915F59C00F9623F /* GarageViewController.swift */; };
 		8711BA7829184B6800B61F9D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8711BA7729184B6800B61F9D /* SearchViewController.swift */; };
 		8711BA7A291855E900B61F9D /* CarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8711BA79291855E900B61F9D /* CarTableViewController.swift */; };
@@ -66,6 +69,7 @@
 		525B9CE4290ECAC000514AB3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		52A791D5291358D900228AE8 /* SearchMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMapViewController.swift; sourceTree = "<group>"; };
 		52A791D829135C2100228AE8 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		52A791DA29183C9400228AE8 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		52FCF43F28FE2A9800C0FDCB /* Carpany.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carpany.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FCF44228FE2A9800C0FDCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FCF44428FE2A9800C0FDCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,9 +83,11 @@
 		52FCF46328FE2A9900C0FDCB /* CarpanyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarpanyUITests.swift; sourceTree = "<group>"; };
 		52FCF46528FE2A9900C0FDCB /* CarpanyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarpanyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5ED8A93F2DA2FB1089F01EE9 /* Pods-Carpany-CarpanyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carpany-CarpanyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Carpany-CarpanyUITests/Pods-Carpany-CarpanyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		812BCC25291AF6630021D63C /* StatusGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusGridCell.swift; sourceTree = "<group>"; };
+		812BCC27291AF6AB0021D63C /* StatusGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusGridViewController.swift; sourceTree = "<group>"; };
 		81689462291635EC00250314 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		818CFB342919B90C00A173DB /* GarageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageCell.swift; sourceTree = "<group>"; };
 		81B5B6E8290CBEC10092C254 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		81F8CB7B2915F3AC00F9623F /* GarageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageCell.swift; sourceTree = "<group>"; };
 		81F8CB7F2915F59C00F9623F /* GarageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageViewController.swift; sourceTree = "<group>"; };
 		8711BA7729184B6800B61F9D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8711BA79291855E900B61F9D /* CarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +145,9 @@
 				52A791D729135BEE00228AE8 /* Cell */,
 				81F8CB7B2915F3AC00F9623F /* GarageCell.swift */,
 				81F8CB7F2915F59C00F9623F /* GarageViewController.swift */,
+				52A791DA29183C9400228AE8 /* ResetPasswordViewController.swift */,
+				52A791D729135BEE00228AE8 /* Cell */,
+				812BCC27291AF6AB0021D63C /* StatusGridViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -147,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				52A791D829135C2100228AE8 /* SearchTableViewCell.swift */,
+				818CFB342919B90C00A173DB /* GarageCell.swift */,
+				812BCC25291AF6630021D63C /* StatusGridCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -482,8 +493,8 @@
 				8711BA802919FC0400B61F9D /* Connect.swift in Sources */,
 				524FC72F28FE5F50007E8801 /* User.swift in Sources */,
 				B845E7EC29162A6500757229 /* MainViewController.swift in Sources */,
+				818CFB352919B90C00A173DB /* GarageCell.swift in Sources */,
 				81F8CB802915F59C00F9623F /* GarageViewController.swift in Sources */,
-				81F8CB7C2915F3AC00F9623F /* GarageCell.swift in Sources */,
 				524FC72B28FE5817007E8801 /* LoginViewController.swift in Sources */,
 				52A791D6291358D900228AE8 /* SearchMapViewController.swift in Sources */,
 				8711BA7829184B6800B61F9D /* SearchViewController.swift in Sources */,
@@ -491,7 +502,11 @@
 				8711BA7E2919CD3B00B61F9D /* MockServer.swift in Sources */,
 				524FC72D28FE5825007E8801 /* SignUpViewController.swift in Sources */,
 				8711BA84291AF32700B61F9D /* DescriptionViewController.swift in Sources */,
+				52A791DB29183C9400228AE8 /* ResetPasswordViewController.swift in Sources */,
+				524FC72D28FE5825007E8801 /* SignUpViewController.swift in Sources */,
+				812BCC26291AF6630021D63C /* StatusGridCell.swift in Sources */,
 				52FCF44528FE2A9800C0FDCB /* SceneDelegate.swift in Sources */,
+				812BCC28291AF6AB0021D63C /* StatusGridViewController.swift in Sources */,
 				525B9CE5290ECAC000514AB3 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
