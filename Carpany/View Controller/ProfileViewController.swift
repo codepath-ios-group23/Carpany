@@ -8,7 +8,7 @@
 import UIKit
 import Parse
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nicknameLabel: UILabel!
@@ -36,7 +36,7 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         let user = PFUser.current()!
-        nicknameLabel.text = user.username
+        nicknameLabel.text = user["Nickname"] as? String
         descriptionTextView.text = user["bio"] as? String
         statusLabel.text = user["status"] as? String
         statusLabel.text = "  #" + statusLabel.text! + "  "
@@ -53,14 +53,43 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        changeStatus()
+        self.viewDidLoad()
     }
     
+    @IBAction func onChangeProfileImage(_ sender: UIGestureRecognizer) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+        if (UIImagePickerController.isSourceTypeAvailable(.camera)) {
+            picker.sourceType = .photoLibrary
+        } else {
+            picker.sourceType = .camera
+        }
+        present(picker, animated: true, completion: nil)
+    }
     
-    func changeStatus() {
+    @IBAction func onChangeDescription(_ sender: Any) {
+        self.performSegue(withIdentifier: "changeDescription", sender: nil)
+    }
+    
+    @IBAction func onChangeName(_ sender: Any) {
+        self.performSegue(withIdentifier: "changeName", sender: nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let user = PFUser.current()!
-        statusLabel.text = user["status"] as? String
-        statusLabel.text = "  #" + statusLabel.text! + "  "
+        let image = info[.editedImage] as! UIImage
+        
+        let scaledImage = image.af.imageAspectScaled(toFit: profileImage.frame.size)
+        
+        self.profileImage.image = scaledImage
+        
+        let imageData = profileImage.image!.pngData()!
+        let file = PFFileObject(name: "image.png", data: imageData)
+        user["profileImage"] = file
+        user.saveInBackground()
+        
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func onLogout(_ sender: Any) {
