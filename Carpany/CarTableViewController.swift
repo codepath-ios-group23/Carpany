@@ -9,21 +9,18 @@
 import UIKit
 
 class CarTableViewController: UITableViewController {
-    
- 
-  
-
-    
+        
     let searchController = UISearchController(searchResultsController: nil)
-    
     var currentCar: [String] = MockData.displayableCars
+    
+    var selectedCar: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         title = "Search"
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
-        
      
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -32,6 +29,8 @@ class CarTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
+
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -53,10 +52,21 @@ class CarTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.selectedCar = currentCar[indexPath.row]
+        self.performSegue(withIdentifier: "CarToDescription", sender: self)
+        
+        
         print(currentCar[indexPath.row])
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       if (segue.identifier == "CarToDescription") {
+          let secondView = segue.destination as! DescriptionViewController
+           secondView.label = self.selectedCar
+       }
+    }
+   
 
     
 

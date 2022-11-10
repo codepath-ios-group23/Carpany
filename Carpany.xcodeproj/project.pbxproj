@@ -31,6 +31,7 @@
 		818CFB352919B90C00A173DB /* GarageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CFB342919B90C00A173DB /* GarageCell.swift */; };
 		81B5B6E9290CBEC10092C254 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B5B6E8290CBEC10092C254 /* ProfileViewController.swift */; };
 		81F8CB802915F59C00F9623F /* GarageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F8CB7F2915F59C00F9623F /* GarageViewController.swift */; };
+		870F25E2291DA1030041BFBA /* DescriptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870F25E1291DA1030041BFBA /* DescriptTableViewCell.swift */; };
 		8711BA7829184B6800B61F9D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8711BA7729184B6800B61F9D /* SearchViewController.swift */; };
 		8711BA7A291855E900B61F9D /* CarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8711BA79291855E900B61F9D /* CarTableViewController.swift */; };
 		8711BA7C29185D9B00B61F9D /* mockdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8711BA7B29185D9B00B61F9D /* mockdata.swift */; };
@@ -89,6 +90,7 @@
 		818CFB342919B90C00A173DB /* GarageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageCell.swift; sourceTree = "<group>"; };
 		81B5B6E8290CBEC10092C254 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		81F8CB7F2915F59C00F9623F /* GarageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageViewController.swift; sourceTree = "<group>"; };
+		870F25E1291DA1030041BFBA /* DescriptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptTableViewCell.swift; sourceTree = "<group>"; };
 		8711BA7729184B6800B61F9D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8711BA79291855E900B61F9D /* CarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewController.swift; sourceTree = "<group>"; };
 		8711BA7B29185D9B00B61F9D /* mockdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mockdata.swift; sourceTree = "<group>"; };
@@ -142,8 +144,6 @@
 				52A791D5291358D900228AE8 /* SearchMapViewController.swift */,
 				8711BA7729184B6800B61F9D /* SearchViewController.swift */,
 				8711BA83291AF32700B61F9D /* DescriptionViewController.swift */,
-				52A791D729135BEE00228AE8 /* Cell */,
-				81F8CB7B2915F3AC00F9623F /* GarageCell.swift */,
 				81F8CB7F2915F59C00F9623F /* GarageViewController.swift */,
 				52A791DA29183C9400228AE8 /* ResetPasswordViewController.swift */,
 				52A791D729135BEE00228AE8 /* Cell */,
@@ -158,6 +158,7 @@
 				52A791D829135C2100228AE8 /* SearchTableViewCell.swift */,
 				818CFB342919B90C00A173DB /* GarageCell.swift */,
 				812BCC25291AF6630021D63C /* StatusGridCell.swift */,
+				870F25E1291DA1030041BFBA /* DescriptTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -500,6 +501,7 @@
 				8711BA7829184B6800B61F9D /* SearchViewController.swift in Sources */,
 				52FCF44328FE2A9800C0FDCB /* AppDelegate.swift in Sources */,
 				8711BA7E2919CD3B00B61F9D /* MockServer.swift in Sources */,
+				870F25E2291DA1030041BFBA /* DescriptTableViewCell.swift in Sources */,
 				524FC72D28FE5825007E8801 /* SignUpViewController.swift in Sources */,
 				8711BA84291AF32700B61F9D /* DescriptionViewController.swift in Sources */,
 				52A791DB29183C9400228AE8 /* ResetPasswordViewController.swift in Sources */,
