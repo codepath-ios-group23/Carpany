@@ -13,18 +13,19 @@ class GarageViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var tableView: UITableView!
     
-    var cars = [PFObject]()
     var carsList = [PFObject]()
     var images = [PFObject?]()
-    var selectedCar: PFObject!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        self.getCarItem()
-        self.loadCars()
+        let user = PFUser.current()!
+        let cars = user["cars"] as? Array<String>
+        if cars != nil && cars?.count != 0 {
+            self.getCarItem(i: 0, cars: cars!)
+        }
     }
     
     @IBAction func onReturn(_ sender: Any) {
@@ -40,31 +41,33 @@ class GarageViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.getCarItem()
-        self.loadCars()
+        self.loadCars(i: 0)
         
     }
     
-    func getCarItem() {
-        let user = PFUser.current()!
-        let cars = user["cars"] as? Array<String>
-        for car in cars ?? [] {
+    func getCarItem(i : Int, cars : Array<String>) {
+        
+        if cars.count != 0 {
             let query = PFQuery(className: "Agg_car")
+            let car = cars[i] as String
             query.getObjectInBackground(withId: car) { (carItem, error) in
                 if carItem != nil {
                     self.carsList.append(carItem!)
                 } else {
                     print("No cars found!")
                 }
+                if i < cars.count - 1 {
+                    self.getCarItem(i: i+1, cars: cars)
+                }
             }
         }
     }
     
-    func loadCars() {
-        for car in carsList {
-            let maker = car["Maker"] as! String
-            let genmodel = car["Genmodel"] as! String
-            let genmodelId = car["Genmodel_ID"] as! String
+    func loadCars(i : Int) {
+        if self.carsList.count != 0 {
+            let maker = self.carsList[i]["Maker"] as! String
+            let genmodel = self.carsList[i]["Genmodel"] as! String
+            let genmodelId = self.carsList[i]["Genmodel_ID"] as! String
             print(maker)
             print(genmodel)
             print(genmodelId)
@@ -74,24 +77,27 @@ class GarageViewController: UIViewController, UITableViewDelegate, UITableViewDa
             query2.whereKey("Genmodel_ID", equalTo:genmodelId)
             query2.whereKey("Genmodel", equalTo:genmodel)
             query2.whereKey("Maker", equalTo:maker)
-            
-            query2.getFirstObjectInBackground() { [self] (imageItem, error) in
-                if imageItem != nil {
+            query2.getFirstObjectInBackground() {(imageItem, error) in
+                if imageItem != nil && error == nil {
                     self.images.append(imageItem)
-                    self.tableView.reloadData()
+                    print(i)
                     print("Number of image: \(self.images.count)")
                     let imageName = imageItem!["Image_name"] as! String
                     print(imageName)
+                    
                 } else {
+                    print(i)
                     self.images.append(nil)
                     print("No preview")
+                }
+                self.tableView.reloadData()
+                if i < self.carsList.count - 1 {
+                    self.loadCars(i: i + 1)
                 }
             }
         }
     }
-
-
-    
+      
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.images.count
     }
@@ -100,20 +106,26 @@ class GarageViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "GarageCell") as! GarageCell
         cell.carImage.layer.cornerRadius = 30
  
+
         if images.count != 0 {
-            let basicURL = "http://www.zhang-jihao.com/resized_DVM/"
+            if images[indexPath.row] != nil {
+                let basicURL = "http://www.zhang-jihao.com/resized_DVM/"
+                let maker = self.images[indexPath.row]!["Maker"] as! String
+                let genmodel = self.images[indexPath.row]!["Genmodel"] as! String
+                let year = String(self.images[indexPath.row]!["Year"] as! Int)
+                let color = self.images[indexPath.row]!["Color"] as! String
+                let imageName = self.images[indexPath.row]!["Image_name"] as! String
+                
+                let raw = basicURL + maker + "/" + genmodel + "/" + year + "/" + color + "/" + imageName
+                let link = raw.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+                
+                let url = URL(string: link)
+                cell.carImage.af.setImage(withURL: url!)
+            } else {
+                let url = URL(string: "https://i.imgur.com/ai65MME.png")!
+                cell.carImage.af.setImage(withURL: url)
+            }
             
-            let maker = self.images[indexPath.row]!["Maker"] as! String
-            let genmodel = self.images[indexPath.row]!["Genmodel"] as! String
-            let year = String(self.images[indexPath.row]!["Year"] as! Int)
-            let color = self.images[indexPath.row]!["Color"] as! String
-            let imageName = self.images[indexPath.row]!["Image_name"] as! String
-            
-            let raw = basicURL + maker + "/" + genmodel + "/" + year + "/" + color + "/" + imageName
-            let link = raw.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-            
-            let url = URL(string: link)
-            cell.carImage.af.setImage(withURL: url!)
         }
         return cell
     }
