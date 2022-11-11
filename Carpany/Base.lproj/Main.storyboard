@@ -355,11 +355,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfZ-6b-5Mw">
-                                <rect key="frame" x="0.0" y="98" width="390" height="663"/>
+                                <rect key="frame" x="0.0" y="97.333333333333314" width="390" height="663.66666666666674"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpI-Ff-RWL">
-                                <rect key="frame" x="20" y="47" width="350" height="35"/>
+                                <rect key="frame" x="20" y="47" width="290" height="34.333333333333343"/>
                                 <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Search Maps">
@@ -372,15 +372,27 @@
                                     <segue destination="3aC-7T-DI7" kind="presentation" identifier="toSearchMap" id="Myz-Ti-DvF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zs7-va-xak">
+                                <rect key="frame" x="321" y="45.333333333333343" width="64" height="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="icons8-funnel-40"/>
+                                <connections>
+                                    <action selector="onFilterButton:" destination="hA3-9J-lJd" eventType="touchUpInside" id="qJ4-4h-ICh"/>
+                                    <segue destination="rPE-Gi-hka" kind="presentation" identifier="toFilterScreen" id="6De-UM-CTd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ekK-l4-AYG"/>
                         <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KfZ-6b-5Mw" firstAttribute="leading" secondItem="ekK-l4-AYG" secondAttribute="leading" id="2qs-kh-fKp"/>
                             <constraint firstItem="ekK-l4-AYG" firstAttribute="bottom" secondItem="KfZ-6b-5Mw" secondAttribute="bottom" id="HLJ-bC-4BW"/>
+                            <constraint firstItem="Zs7-va-xak" firstAttribute="leading" secondItem="xpI-Ff-RWL" secondAttribute="trailing" constant="11" id="KDp-Ql-h8I"/>
+                            <constraint firstItem="ekK-l4-AYG" firstAttribute="trailing" secondItem="Zs7-va-xak" secondAttribute="trailing" constant="5" id="MWy-bx-yap"/>
                             <constraint firstItem="xpI-Ff-RWL" firstAttribute="leading" secondItem="ekK-l4-AYG" secondAttribute="leading" constant="20" id="Q6X-1l-dLA"/>
+                            <constraint firstItem="KfZ-6b-5Mw" firstAttribute="top" secondItem="Zs7-va-xak" secondAttribute="bottom" constant="12" id="b2h-Hg-Wyg"/>
                             <constraint firstItem="xpI-Ff-RWL" firstAttribute="top" secondItem="ekK-l4-AYG" secondAttribute="top" id="baa-9P-jyD"/>
-                            <constraint firstItem="ekK-l4-AYG" firstAttribute="trailing" secondItem="xpI-Ff-RWL" secondAttribute="trailing" constant="20" id="fb7-9l-hyO"/>
+                            <constraint firstItem="ekK-l4-AYG" firstAttribute="trailing" secondItem="xpI-Ff-RWL" secondAttribute="trailing" constant="80" id="fb7-9l-hyO"/>
                             <constraint firstItem="KfZ-6b-5Mw" firstAttribute="top" secondItem="xpI-Ff-RWL" secondAttribute="bottom" constant="16" id="gz9-nj-vvq"/>
                             <constraint firstItem="ekK-l4-AYG" firstAttribute="trailing" secondItem="KfZ-6b-5Mw" secondAttribute="trailing" id="iRc-9b-58v"/>
                         </constraints>
@@ -392,7 +404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4PD-eg-kc9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1233.8461538461538" y="1473.6966824644549"/>
+            <point key="canvasLocation" x="680" y="1474"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="IvI-Cf-XSI">
@@ -457,7 +469,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="440" y="2170.3791469194312"/>
+            <point key="canvasLocation" x="-278" y="2190"/>
         </scene>
         <!--Search Map View Controller-->
         <scene sceneID="PAK-UL-WY4">
@@ -526,7 +538,139 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hm-Ym-ex0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Pdc-ad-HCV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1233.8461538461538" y="2159.7156398104266"/>
+            <point key="canvasLocation" x="637" y="2214"/>
+        </scene>
+        <!--Map Filter View Controller-->
+        <scene sceneID="OPl-9Y-BMk">
+            <objects>
+                <viewController id="rPE-Gi-hka" customClass="MapFilterViewController" customModule="Carpany" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B4C-Kl-Gr6">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WNH-hc-OGu" userLabel="Gas Station Stack View">
+                                <rect key="frame" x="20" y="125.33333333333331" width="148" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsZ-Bc-m7N" userLabel="Gas Station Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="I5Y-2h-lO2"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="unchecked"/>
+                                        <connections>
+                                            <action selector="onGasStation:" destination="exE-Cr-hai" eventType="touchUpInside" id="MVy-es-Yd0"/>
+                                            <action selector="selectGasStation:" destination="rPE-Gi-hka" eventType="touchUpInside" id="duX-yr-eY8"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gas Station" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0E-eu-GRQ">
+                                        <rect key="frame" x="60" y="10.000000000000012" width="88" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QM5-B6-a7n" userLabel="Parking Stack View">
+                                <rect key="frame" x="19.999999999999993" y="245.33333333333337" width="117.33333333333331" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qix-Nk-ZD1" userLabel="Parking Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="cfd-Sn-se2"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="unchecked"/>
+                                        <connections>
+                                            <action selector="selectParking:" destination="rPE-Gi-hka" eventType="touchUpInside" id="6sj-fx-kwE"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sey-vd-glV">
+                                        <rect key="frame" x="60" y="9.9999999999999982" width="57.333333333333343" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="L2D-yG-1RL" userLabel="Car Rental Stack View">
+                                <rect key="frame" x="20" y="185.33333333333334" width="139" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJh-gv-ujQ" userLabel="Car Rental Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="WRw-vb-7SZ"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="unchecked"/>
+                                        <connections>
+                                            <action selector="selectCarRental:" destination="rPE-Gi-hka" eventType="touchUpInside" id="V7e-i3-0iF"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Rental" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0G-HY-mKh">
+                                        <rect key="frame" x="60" y="9.9999999999999982" width="79" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PCX-Yq-nve" userLabel="EV Charger Stack View">
+                                <rect key="frame" x="20" y="305.33333333333331" width="146.66666666666666" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjN-Sj-MwZ" userLabel="EV Charger Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="c2k-ug-G9L"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="unchecked"/>
+                                        <connections>
+                                            <action selector="selectEVCharger:" destination="rPE-Gi-hka" eventType="touchUpInside" id="bhl-ou-zkH"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EV Charger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Uh-XH-48O">
+                                        <rect key="frame" x="60.000000000000007" y="9.9999999999999982" width="86.666666666666686" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find nearby places" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrv-nY-2ix">
+                                <rect key="frame" x="40.000000000000014" y="57" width="239.33333333333337" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zus-5h-7gn"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WNH-hc-OGu" firstAttribute="leading" secondItem="zus-5h-7gn" secondAttribute="leading" constant="20" id="2J0-6q-Oby"/>
+                            <constraint firstItem="PCX-Yq-nve" firstAttribute="leading" secondItem="zus-5h-7gn" secondAttribute="leading" constant="20" id="3I2-o4-BUE"/>
+                            <constraint firstItem="QM5-B6-a7n" firstAttribute="top" secondItem="L2D-yG-1RL" secondAttribute="bottom" constant="20" id="CBa-rJ-VMv"/>
+                            <constraint firstItem="QM5-B6-a7n" firstAttribute="leading" secondItem="zus-5h-7gn" secondAttribute="leading" constant="20" id="LUt-vd-YB7"/>
+                            <constraint firstItem="yrv-nY-2ix" firstAttribute="leading" secondItem="zus-5h-7gn" secondAttribute="leading" constant="40" id="OCm-nP-nQq"/>
+                            <constraint firstItem="WNH-hc-OGu" firstAttribute="top" secondItem="yrv-nY-2ix" secondAttribute="bottom" constant="30" id="PXs-LI-yND"/>
+                            <constraint firstItem="yrv-nY-2ix" firstAttribute="top" secondItem="B4C-Kl-Gr6" secondAttribute="topMargin" constant="10" id="UuD-vY-XhU"/>
+                            <constraint firstItem="L2D-yG-1RL" firstAttribute="top" secondItem="WNH-hc-OGu" secondAttribute="bottom" constant="20" id="avM-rb-hKO"/>
+                            <constraint firstItem="PCX-Yq-nve" firstAttribute="top" secondItem="QM5-B6-a7n" secondAttribute="bottom" constant="20" id="cQy-IB-VWV"/>
+                            <constraint firstItem="L2D-yG-1RL" firstAttribute="leading" secondItem="zus-5h-7gn" secondAttribute="leading" constant="20" id="oIO-mR-bCs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="carRentalButton" destination="mJh-gv-ujQ" id="blc-Qc-HEO"/>
+                        <outlet property="evChargerButton" destination="JjN-Sj-MwZ" id="uzt-4e-F1h"/>
+                        <outlet property="gasStationButton" destination="ZsZ-Bc-m7N" id="jtA-JZ-4on"/>
+                        <outlet property="parkingButton" destination="Qix-Nk-ZD1" id="a2Z-Ba-nXG"/>
+                        <segue destination="exE-Cr-hai" kind="unwind" identifier="unwindToMap" unwindAction="unwindToMapViewWithSender:" id="a8R-UO-v2u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gq4-Wt-pZN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="exE-Cr-hai" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1450.7692307692307" y="2214.4549763033174"/>
         </scene>
         <!--Description View Controller-->
         <scene sceneID="1en-fi-IN9">
@@ -1267,7 +1411,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K5y-bi-7Eb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="440" y="1474.4075829383885"/>
+            <point key="canvasLocation" x="-278" y="1474"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="e1c-Pu-YY6">
@@ -1423,11 +1567,14 @@
         <image name="garage" width="225" height="225"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="icons8-add-image-50" width="50" height="50"/>
+        <image name="icons8-funnel-40" width="40" height="40"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="map" catalog="system" width="128" height="112"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="profile" width="1280" height="1280"/>
+        <image name="unchecked" width="40" height="40"/>
+
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
