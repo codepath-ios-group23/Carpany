@@ -12,6 +12,7 @@ import Parse
 class DescriptionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
     
+    @IBOutlet weak var favButton: UIButton!
     
     @IBOutlet weak var sCar: UILabel!
     @IBOutlet weak var descriptionTableView: UITableView!
@@ -22,16 +23,18 @@ class DescriptionViewController: UIViewController, UITableViewDelegate, UITableV
     
 
 
-    
+    var favorited:Bool = false
     var images = [PFObject?]()
     var label: String = ""
     var carList =  [Int: [String]]()
-    
+    var objectcar: String = ""
+    var usercars: Array<String> = []
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        favButton.titleLabel?.text = ""
         descriptionTableView.delegate = self
         descriptionTableView.dataSource = self
         
@@ -42,7 +45,6 @@ class DescriptionViewController: UIViewController, UITableViewDelegate, UITableV
         DescriptionImage.dataSource = self
         
         pass()
-        
 //        let components = label.split(separator: " ")
 //        let maker = components[0]
 //        let genmodelId = components[components.endIndex-1]
@@ -105,6 +107,8 @@ class DescriptionViewController: UIViewController, UITableViewDelegate, UITableV
                         
                         ]
                         
+                        self.objectcar = carIts?.objectId as! String
+                        
                         let query = PFQuery(className: "image")
                         query.whereKey("Maker", equalTo: self.carList[0]?[1])
                         query.whereKey("Genmodel", equalTo: self.carList[1]?[1] )
@@ -120,7 +124,7 @@ class DescriptionViewController: UIViewController, UITableViewDelegate, UITableV
                             }
                             self.DescriptionImage.reloadData()
                         }
-                        
+                        self.isFavorited()
                         self.descriptionTableView.reloadData()
                         
                         
@@ -193,7 +197,18 @@ class DescriptionViewController: UIViewController, UITableViewDelegate, UITableV
         return numberOfRow
     }
     
-
+    
+    func setFavorite(){
+        let favorite = self.favorited
+        if(favorite){
+            favButton.setImage(UIImage(named:"favor-icon"), for: UIControl.State.normal)
+        }
+        else{
+            favButton.setImage(UIImage(named:"favor-icon-red"), for: UIControl.State.normal)
+        }
+        self.favorited = !self.favorited
+    }
+    
 
 
     /*
@@ -205,7 +220,41 @@ class DescriptionViewController: UIViewController, UITableViewDelegate, UITableV
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func isFavorited(){
+        let user = PFUser.current()!
+        self.usercars = (user["cars"] as? Array<String>)!
+        if (self.usercars.contains(self.objectcar)){
+            favButton.setImage(UIImage(named:"favor-icon-red"), for: UIControl.State.normal)
+            self.favorited = true
+        }else {
+            favButton.setImage(UIImage(named:"favor-icon"), for: UIControl.State.normal)
+            self.favorited = false
+        }
+        
+    }
+    
 
+    @IBAction func addtoGarage(_ sender: Any) {
+        
+        
+        let user = PFUser.current()!
+        
+        let toBeFavorited = self.favorited
+        setFavorite()
+        if (toBeFavorited){
+            self.usercars = self.usercars.filter(){$0 != self.objectcar}
+        }else {
+            self.usercars.append(self.objectcar)
+        }
+        
+        
+        user["cars"] = self.usercars
+
+        user.saveInBackground()
+        
+        
+    }
 }
 
 

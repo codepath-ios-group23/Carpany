@@ -551,11 +551,25 @@
                         <viewLayoutGuide key="safeArea" id="9aE-oV-ujp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="m1J-6H-w94"/>
+                    <navigationItem key="navigationItem" id="m1J-6H-w94">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="rsO-P2-2S1">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="hMR-va-nVP">
+                                <rect key="frame" x="288" y="4.6666666666666679" width="86" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="favor-icon"/>
+                                <connections>
+                                    <action selector="addtoGarage:" destination="c9W-Id-Yly" eventType="touchUpInside" id="ThZ-vv-VAU"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="DescriptionImage" destination="vFh-8q-npt" id="UVI-AI-Iei"/>
                         <outlet property="DescriptionItems" destination="pcI-Tg-03B" id="eaw-E8-pFK"/>
                         <outlet property="descriptionTableView" destination="pcI-Tg-03B" id="YcI-Da-dat"/>
+                        <outlet property="favButton" destination="hMR-va-nVP" id="K5G-RQ-9Ra"/>
                         <outlet property="sCar" destination="EJa-xK-lRb" id="beE-ei-ybh"/>
                     </connections>
                 </viewController>
@@ -1056,6 +1070,7 @@
         <image name="Porsche__Boxster__2019__Silver__71_6__726__image_19" width="300" height="300"/>
         <image name="car" catalog="system" width="128" height="95"/>
         <image name="carpany-logos_transparent" width="1200" height="1200"/>
+        <image name="favor-icon" width="30" height="30"/>
         <image name="garage" width="225" height="225"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="icons8-add-image-50" width="50" height="50"/>
