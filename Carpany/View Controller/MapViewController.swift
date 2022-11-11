@@ -9,16 +9,19 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, SearchMapViewControllerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, SearchMapViewControllerDelegate, MapFilterViewControllerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
     var selectedPin: MKPlacemark? = nil
+    var userAnnotation = MKPointAnnotation()
+    var annotations: [MKAnnotation] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
         mapView.delegate = self
+        
         //request authorization
         locationManager.requestWhenInUseAuthorization()
         //Check if user always allow for accessing location
@@ -27,9 +30,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
         locationManager.requestAlwaysAuthorization()
         
-        //pass the mapView from MapViewController to SearchMapViewController
-//        SearchMapViewController.mapView = mapView
-//        SearchMapViewController.handleMapSearchDelegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,11 +71,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             mapView.pointOfInterestFilter = MKPointOfInterestFilter(including: [.carRental, .evCharger, .gasStation, .parking])
             
             //Get user's current location and drop a pin
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = locationCoordinate
-            annotation.title = "Current Location"
+            userAnnotation.coordinate = locationCoordinate
+            userAnnotation.title = "Current Location"
             
-            mapView.addAnnotation(annotation)
+            mapView.addAnnotation(userAnnotation)
         }
     }
     
@@ -87,7 +86,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         if segue.identifier == "toSearchMap" {
             let SearchMapVC = segue.destination as! SearchMapViewController
             SearchMapVC.delegate = self
+        } else if segue.identifier == "toFilterScreen" {
+            let MapFilterVC = segue.destination as! MapFilterViewController
+            MapFilterVC.delegate = self
         }
+    }
+    
+    
+    @IBAction func onFilterButton(_ sender: Any) {
+        mapView.removeAnnotations(annotations)
     }
     
     func dropPinZoomIn(controller: SearchMapViewController, placemark: MKPlacemark) {
@@ -108,6 +115,22 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     @IBAction func unwindToMapView(sender: UIStoryboardSegue) {
         
+    }
+    
+    func applyFilter(controller: MapFilterViewController,results: [MKMapItem]) {
+        for i in 0...10 {
+            var placemark: [MKPlacemark] = []
+            placemark.append(results[i].placemark)
+            
+            var annotation = MKPointAnnotation()
+            annotation.coordinate = placemark[0].coordinate
+            annotation.title = placemark[0].name
+            if let city = placemark[0].locality, let state = placemark[0].administrativeArea {
+                annotation.subtitle = "\(city) \(state)"
+            }
+            mapView.addAnnotation(annotation)
+            self.annotations.append(annotation)
+        }
     }
 }
 
