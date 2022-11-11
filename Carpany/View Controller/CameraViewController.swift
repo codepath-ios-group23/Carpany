@@ -57,6 +57,7 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
         
         present(picker, animated: true, completion: nil)
     }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.editedImage] as! UIImage
         
@@ -65,6 +66,11 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
         
         imageView.image = scaleimage
         dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func onCancel(_ sender: Any) {
+        self.dismiss(animated: true)
     }
     /*
     // MARK: - Navigation
