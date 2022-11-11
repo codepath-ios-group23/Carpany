@@ -23,7 +23,7 @@ class DescriptionViewController: UIViewController, UITableViewDelegate, UITableV
 
 
     
-    
+    var images = [PFObject?]()
     var label: String = ""
     var carList =  [Int: [String]]()
     
@@ -69,6 +69,10 @@ class DescriptionViewController: UIViewController, UITableViewDelegate, UITableV
         // Do any additional setup after loading the view.
     }
     
+    
+    
+    
+    
     func pass() {
         let query = PFQuery(className: "Agg_car")
         query.whereKey("Full_name", equalTo: label)
@@ -101,6 +105,22 @@ class DescriptionViewController: UIViewController, UITableViewDelegate, UITableV
                         
                         ]
                         
+                        let query = PFQuery(className: "image")
+                        query.whereKey("Maker", equalTo: self.carList[0]?[1])
+                        query.whereKey("Genmodel", equalTo: self.carList[1]?[1] )
+                        query.whereKey("Genmodel_ID", equalTo:self.carList[2]?[1])
+                        query.findObjectsInBackground(){(imageItems, error) in
+                            if imageItems != nil {
+                                self.images = imageItems!
+                                let imageName = imageItems![0]["Image_name"] as! String
+                                print(imageName)
+                                
+                            } else {
+                                print("No preview")
+                            }
+                            self.DescriptionImage.reloadData()
+                        }
+                        
                         self.descriptionTableView.reloadData()
                         
                         
@@ -121,12 +141,33 @@ class DescriptionViewController: UIViewController, UITableViewDelegate, UITableV
                 cell.Dvalue?.text = carList[indexPath.row]?[1]
                 return cell
     
-            case DescriptionItems:
-//                cell = tableView.dequeueReusableCell(withIdentifier: "downCell", for: indexPath)
-//                cell.textLabel?.text = downData[indexPath.row]
-//                cell.backgroundColor = UIColor.yellow
-//                return cell
-                return UITableViewCell()
+            case DescriptionImage:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionImageTableViewCell", for: indexPath) as! DescriptionImageTableViewCell
+                cell.DescriptImage.layer.cornerRadius = 30
+         
+
+                if self.images.count != 0 {
+                    if self.images[indexPath.row] != nil {
+                        let basicURL = "http://www.zhang-jihao.com/resized_DVM/"
+                        let maker = self.images[indexPath.row]!["Maker"] as! String
+                        let genmodel = self.images[indexPath.row]!["Genmodel"] as! String
+                        let year = String(self.images[indexPath.row]!["Year"] as! Int)
+                        let color = self.images[indexPath.row]!["Color"] as! String
+                        let imageName = self.images[indexPath.row]!["Image_name"] as! String
+                        
+                        let raw = basicURL + maker + "/" + genmodel + "/" + year + "/" + color + "/" + imageName
+                        let link = raw.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+                        
+                        let url = URL(string: link)
+                        cell.DescriptImage.af.setImage(withURL: url!)
+                        print(url)
+                    } else {
+                        let url = URL(string: "https://i.imgur.com/ai65MME.png")!
+                        cell.DescriptImage.af.setImage(withURL: url)
+                    }
+                    
+                }
+                return cell
             default:
                 print("Some things Wrong!!")
                 return UITableViewCell()
@@ -142,9 +183,10 @@ class DescriptionViewController: UIViewController, UITableViewDelegate, UITableV
         var numberOfRow = 0
         switch tableView {
         case DescriptionItems:
-            numberOfRow = carList.count
-       // case downTableview:
-       //     numberOfRow = downData.count
+            numberOfRow = self.carList.count
+            
+        case DescriptionImage:
+            numberOfRow = self.images.count
         default:
             print("Some things Wrong!!")
         }

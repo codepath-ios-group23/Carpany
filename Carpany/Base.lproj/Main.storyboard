@@ -457,24 +457,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vFh-8q-npt" userLabel="DescriptionImageTable">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vFh-8q-npt" userLabel="DescriptionImageTable">
                                 <rect key="frame" x="0.0" y="104" width="390" height="295"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DescriptionImage" rowHeight="162" id="N71-6T-cpW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DescriptionImageTableViewCell" rowHeight="162" id="N71-6T-cpW" customClass="DescriptionImageTableViewCell" customModule="Carpany" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="390" height="162"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N71-6T-cpW" id="k2v-GD-xFA">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="162"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qJB-pT-EPh">
-                                                    <rect key="frame" x="75" y="17" width="240" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qJB-pT-EPh">
+                                                    <rect key="frame" x="20" y="11" width="350" height="140"/>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qJB-pT-EPh" firstAttribute="leading" secondItem="k2v-GD-xFA" secondAttribute="leadingMargin" id="CfD-1z-mxX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qJB-pT-EPh" secondAttribute="bottom" id="acT-gu-ZQg"/>
+                                                <constraint firstItem="qJB-pT-EPh" firstAttribute="top" secondItem="k2v-GD-xFA" secondAttribute="topMargin" id="gUb-IO-Ndb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qJB-pT-EPh" secondAttribute="trailing" id="gxN-sY-FJG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="DescriptImage" destination="qJB-pT-EPh" id="b4F-rX-y5s"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
