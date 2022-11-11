@@ -341,11 +341,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfZ-6b-5Mw">
-                                <rect key="frame" x="0.0" y="98" width="390" height="663"/>
+                                <rect key="frame" x="0.0" y="97.333333333333314" width="390" height="663.66666666666674"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpI-Ff-RWL">
-                                <rect key="frame" x="20" y="47" width="290" height="35"/>
+                                <rect key="frame" x="20" y="47" width="290" height="34.333333333333343"/>
                                 <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Search Maps">
@@ -359,7 +359,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zs7-va-xak">
-                                <rect key="frame" x="321" y="38" width="64" height="54"/>
+                                <rect key="frame" x="321" y="45.333333333333343" width="64" height="40"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button" image="icons8-funnel-40"/>
                                 <connections>
@@ -376,12 +376,11 @@
                             <constraint firstItem="Zs7-va-xak" firstAttribute="leading" secondItem="xpI-Ff-RWL" secondAttribute="trailing" constant="11" id="KDp-Ql-h8I"/>
                             <constraint firstItem="ekK-l4-AYG" firstAttribute="trailing" secondItem="Zs7-va-xak" secondAttribute="trailing" constant="5" id="MWy-bx-yap"/>
                             <constraint firstItem="xpI-Ff-RWL" firstAttribute="leading" secondItem="ekK-l4-AYG" secondAttribute="leading" constant="20" id="Q6X-1l-dLA"/>
+                            <constraint firstItem="KfZ-6b-5Mw" firstAttribute="top" secondItem="Zs7-va-xak" secondAttribute="bottom" constant="12" id="b2h-Hg-Wyg"/>
                             <constraint firstItem="xpI-Ff-RWL" firstAttribute="top" secondItem="ekK-l4-AYG" secondAttribute="top" id="baa-9P-jyD"/>
-                            <constraint firstItem="KfZ-6b-5Mw" firstAttribute="top" secondItem="Zs7-va-xak" secondAttribute="bottom" constant="6" id="cVt-8O-TSd"/>
                             <constraint firstItem="ekK-l4-AYG" firstAttribute="trailing" secondItem="xpI-Ff-RWL" secondAttribute="trailing" constant="80" id="fb7-9l-hyO"/>
                             <constraint firstItem="KfZ-6b-5Mw" firstAttribute="top" secondItem="xpI-Ff-RWL" secondAttribute="bottom" constant="16" id="gz9-nj-vvq"/>
                             <constraint firstItem="ekK-l4-AYG" firstAttribute="trailing" secondItem="KfZ-6b-5Mw" secondAttribute="trailing" id="iRc-9b-58v"/>
-                            <constraint firstItem="Zs7-va-xak" firstAttribute="top" secondItem="wH2-6x-1jc" secondAttribute="top" constant="38" id="rzP-bX-Dab"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="P2A-zE-BNN"/>
@@ -1196,14 +1195,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AddCommentCell" id="ZYq-JT-bBR">
-                                        <rect key="frame" x="0.0" y="470.66666793823242" width="390" height="36.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="470.66666793823242" width="390" height="37"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZYq-JT-bBR" id="kXl-JE-W25">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="36.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="37"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a comment..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dV-LE-xGE">
-                                                    <rect key="frame" x="16" y="8.0000000000000018" width="366" height="20.666666666666671"/>
+                                                    <rect key="frame" x="16" y="8" width="366" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemGray3Color"/>
                                                     <nil key="highlightedColor"/>

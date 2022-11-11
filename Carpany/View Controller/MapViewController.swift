@@ -16,6 +16,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     var selectedPin: MKPlacemark? = nil
     var userAnnotation = MKPointAnnotation()
     var annotations: [MKAnnotation] = []
+    var specificSearch: [MKAnnotation] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,18 +96,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     @IBAction func onFilterButton(_ sender: Any) {
         mapView.removeAnnotations(annotations)
+        mapView.removeAnnotations(specificSearch)
     }
     
     func dropPinZoomIn(controller: SearchMapViewController, placemark: MKPlacemark) {
         selectedPin = placemark
-        //clear existing pins
-//        mapView.removeAnnotation(annotation)
         let searchAnnotation = MKPointAnnotation()
         searchAnnotation.coordinate = placemark.coordinate
         searchAnnotation.title = placemark.name
         if let city = placemark.locality, let state = placemark.administrativeArea {
             searchAnnotation.subtitle = "\(city) \(state)"
         }
+        specificSearch.append(searchAnnotation)
         mapView.addAnnotation(searchAnnotation)
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegion(center: placemark.coordinate, span: span)
