@@ -17,6 +17,7 @@ class CarTableViewController: UITableViewController, UISearchResultsUpdating {
     var cars = [PFObject]()
     var originalCars = [PFObject]()
     var carNames = [String]()
+    var selectedCar : PFObject?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,7 +113,15 @@ class CarTableViewController: UITableViewController, UISearchResultsUpdating {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        self.selectedCar = self.cars[indexPath.row]
+        self.performSegue(withIdentifier: "toCarDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       if (segue.identifier == "toCarDetail") {
+          let secondView = segue.destination as! CarDetailViewController
+           secondView.car = self.selectedCar!
+       }
     }
     
     func updateSearchResults(for searchController: UISearchController) {
