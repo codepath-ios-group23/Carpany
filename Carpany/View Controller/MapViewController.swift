@@ -118,9 +118,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func applyFilter(controller: MapFilterViewController,results: [MKMapItem]) {
-        for i in 0...10 {
+        for mapItem in results {
             var placemark: [MKPlacemark] = []
-            placemark.append(results[i].placemark)
+            placemark.append(mapItem.placemark)
             
             var annotation = MKPointAnnotation()
             annotation.coordinate = placemark[0].coordinate
