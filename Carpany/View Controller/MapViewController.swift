@@ -132,5 +132,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             self.annotations.append(annotation)
         }
     }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "MyMarker")
+        switch annotation.title!! {
+            case "Current Location":
+                annotationView.markerTintColor = UIColor.blue
+            default:
+                annotationView.markerTintColor = UIColor.red
+        }
+        return annotationView
+    }
 }
 
