@@ -29,15 +29,15 @@
 		812BCC28291AF6AB0021D63C /* StatusGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BCC27291AF6AB0021D63C /* StatusGridViewController.swift */; };
 		81689463291635EC00250314 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 81689462291635EC00250314 /* README.md */; };
 		818CFB352919B90C00A173DB /* GarageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CFB342919B90C00A173DB /* GarageCell.swift */; };
+		81A765C6291D8788008F793E /* EditDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A765C5291D8788008F793E /* EditDescriptionViewController.swift */; };
+		81A765C8291D8E53008F793E /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A765C7291D8E53008F793E /* EditNameViewController.swift */; };
+		81A765CA291DD14D008F793E /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A765C9291DD14D008F793E /* CarTableViewCell.swift */; };
 		81B5B6E9290CBEC10092C254 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B5B6E8290CBEC10092C254 /* ProfileViewController.swift */; };
 		81F8CB802915F59C00F9623F /* GarageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F8CB7F2915F59C00F9623F /* GarageViewController.swift */; };
-		B833EAD7291AD3480082A594 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B833EAD6291AD3480082A594 /* CameraViewController.swift */; };
 		8711BA7829184B6800B61F9D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8711BA7729184B6800B61F9D /* SearchViewController.swift */; };
 		8711BA7A291855E900B61F9D /* CarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8711BA79291855E900B61F9D /* CarTableViewController.swift */; };
-		8711BA7C29185D9B00B61F9D /* mockdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8711BA7B29185D9B00B61F9D /* mockdata.swift */; };
-		8711BA7E2919CD3B00B61F9D /* MockServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8711BA7D2919CD3B00B61F9D /* MockServer.swift */; };
-		8711BA802919FC0400B61F9D /* Connect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8711BA7F2919FC0400B61F9D /* Connect.swift */; };
 		8711BA84291AF32700B61F9D /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8711BA83291AF32700B61F9D /* DescriptionViewController.swift */; };
+		B833EAD7291AD3480082A594 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B833EAD6291AD3480082A594 /* CameraViewController.swift */; };
 		B845E7EC29162A6500757229 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B845E7EB29162A6500757229 /* MainViewController.swift */; };
 		B8B45820291C29E200BAFBA7 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4581F291C29E200BAFBA7 /* PostCell.swift */; };
 		B8B45822291C37B800BAFBA7 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B45821291C37B800BAFBA7 /* CommentCell.swift */; };
@@ -90,13 +90,13 @@
 		812BCC27291AF6AB0021D63C /* StatusGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusGridViewController.swift; sourceTree = "<group>"; };
 		81689462291635EC00250314 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		818CFB342919B90C00A173DB /* GarageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageCell.swift; sourceTree = "<group>"; };
+		81A765C5291D8788008F793E /* EditDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDescriptionViewController.swift; sourceTree = "<group>"; };
+		81A765C7291D8E53008F793E /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
+		81A765C9291DD14D008F793E /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		81B5B6E8290CBEC10092C254 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		81F8CB7F2915F59C00F9623F /* GarageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageViewController.swift; sourceTree = "<group>"; };
 		8711BA7729184B6800B61F9D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8711BA79291855E900B61F9D /* CarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewController.swift; sourceTree = "<group>"; };
-		8711BA7B29185D9B00B61F9D /* mockdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mockdata.swift; sourceTree = "<group>"; };
-		8711BA7D2919CD3B00B61F9D /* MockServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServer.swift; sourceTree = "<group>"; };
-		8711BA7F2919FC0400B61F9D /* Connect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connect.swift; sourceTree = "<group>"; };
 		8711BA83291AF32700B61F9D /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		9D8A989E194167C70C18AC70 /* Pods-CarpanyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarpanyTests.debug.xcconfig"; path = "Target Support Files/Pods-CarpanyTests/Pods-CarpanyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A246B0AA5B09482180965380 /* Pods_Carpany.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carpany.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +141,9 @@
 		524FC72928FE57FF007E8801 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				52A791D729135BEE00228AE8 /* Cell */,
+				8711BA79291855E900B61F9D /* CarTableViewController.swift */,
+				B833EAD6291AD3480082A594 /* CameraViewController.swift */,
 				524FC72A28FE5817007E8801 /* LoginViewController.swift */,
 				524FC72C28FE5825007E8801 /* SignUpViewController.swift */,
 				81B5B6E8290CBEC10092C254 /* ProfileViewController.swift */,
@@ -148,12 +151,11 @@
 				52A791D5291358D900228AE8 /* SearchMapViewController.swift */,
 				8711BA7729184B6800B61F9D /* SearchViewController.swift */,
 				8711BA83291AF32700B61F9D /* DescriptionViewController.swift */,
-				52A791D729135BEE00228AE8 /* Cell */,
-				81F8CB7B2915F3AC00F9623F /* GarageCell.swift */,
 				81F8CB7F2915F59C00F9623F /* GarageViewController.swift */,
 				52A791DA29183C9400228AE8 /* ResetPasswordViewController.swift */,
-				52A791D729135BEE00228AE8 /* Cell */,
 				812BCC27291AF6AB0021D63C /* StatusGridViewController.swift */,
+				81A765C5291D8788008F793E /* EditDescriptionViewController.swift */,
+				81A765C7291D8E53008F793E /* EditNameViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -161,9 +163,12 @@
 		52A791D729135BEE00228AE8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				B8B45821291C37B800BAFBA7 /* CommentCell.swift */,
+				B8B4581F291C29E200BAFBA7 /* PostCell.swift */,
 				52A791D829135C2100228AE8 /* SearchTableViewCell.swift */,
 				818CFB342919B90C00A173DB /* GarageCell.swift */,
 				812BCC25291AF6630021D63C /* StatusGridCell.swift */,
+				81A765C9291DD14D008F793E /* CarTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -203,13 +208,6 @@
 				52FCF45028FE2A9900C0FDCB /* Info.plist */,
 				524FC72E28FE5F50007E8801 /* User.swift */,
 				B845E7EB29162A6500757229 /* MainViewController.swift */,
-				B833EAD6291AD3480082A594 /* CameraViewController.swift */,
-				B8B4581F291C29E200BAFBA7 /* PostCell.swift */,
-				B8B45821291C37B800BAFBA7 /* CommentCell.swift */,
-				8711BA79291855E900B61F9D /* CarTableViewController.swift */,
-				8711BA7B29185D9B00B61F9D /* mockdata.swift */,
-				8711BA7F2919FC0400B61F9D /* Connect.swift */,
-				8711BA7D2919CD3B00B61F9D /* MockServer.swift */,
 			);
 			path = Carpany;
 			sourceTree = "<group>";
@@ -497,23 +495,23 @@
 			files = (
 				8711BA7A291855E900B61F9D /* CarTableViewController.swift in Sources */,
 				52A791D929135C2100228AE8 /* SearchTableViewCell.swift in Sources */,
-				8711BA7C29185D9B00B61F9D /* mockdata.swift in Sources */,
 				81B5B6E9290CBEC10092C254 /* ProfileViewController.swift in Sources */,
-				8711BA802919FC0400B61F9D /* Connect.swift in Sources */,
 				524FC72F28FE5F50007E8801 /* User.swift in Sources */,
 				B845E7EC29162A6500757229 /* MainViewController.swift in Sources */,
+				81A765CA291DD14D008F793E /* CarTableViewCell.swift in Sources */,
 				818CFB352919B90C00A173DB /* GarageCell.swift in Sources */,
 				81F8CB802915F59C00F9623F /* GarageViewController.swift in Sources */,
 				524FC72B28FE5817007E8801 /* LoginViewController.swift in Sources */,
 				52A791D6291358D900228AE8 /* SearchMapViewController.swift in Sources */,
 				8711BA7829184B6800B61F9D /* SearchViewController.swift in Sources */,
 				52FCF44328FE2A9800C0FDCB /* AppDelegate.swift in Sources */,
-				8711BA7E2919CD3B00B61F9D /* MockServer.swift in Sources */,
 				524FC72D28FE5825007E8801 /* SignUpViewController.swift in Sources */,
 				8711BA84291AF32700B61F9D /* DescriptionViewController.swift in Sources */,
 				52A791DB29183C9400228AE8 /* ResetPasswordViewController.swift in Sources */,
 				524FC72D28FE5825007E8801 /* SignUpViewController.swift in Sources */,
+				81A765C8291D8E53008F793E /* EditNameViewController.swift in Sources */,
 				B833EAD7291AD3480082A594 /* CameraViewController.swift in Sources */,
+				81A765C6291D8788008F793E /* EditDescriptionViewController.swift in Sources */,
 				812BCC26291AF6630021D63C /* StatusGridCell.swift in Sources */,
 				52FCF44528FE2A9800C0FDCB /* SceneDelegate.swift in Sources */,
 				812BCC28291AF6AB0021D63C /* StatusGridViewController.swift in Sources */,

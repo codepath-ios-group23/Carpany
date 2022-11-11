@@ -115,12 +115,18 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.usernameLabel.text = user.username
             
             cell.captionLabel.text = post["caption"] as! String
+            
             let imageFile = post["image"] as! PFFileObject
             let urlString = imageFile.url!
             let url = URL(string: urlString)!
             
-            
             cell.photoView.af.setImage(withURL: url)
+            
+            cell.photoView.layer.masksToBounds = true
+            cell.photoView.layer.cornerRadius = 5
+            cell.photoView.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
+            cell.photoView.layer.borderWidth = 2.0;
+            
             return cell
         } else if indexPath.row <= comments.count{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
@@ -128,9 +134,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.commentLabel.text = comment["text"] as? String
             let user = comment["author"] as! PFUser
             cell.nameLabel.text = user.username
+            
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
+            cell.layer.masksToBounds = true
+            cell.layer.cornerRadius = 5
+            cell.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
+            cell.layer.borderWidth = 1.0;
             return cell
         }
     }

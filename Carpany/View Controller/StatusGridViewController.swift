@@ -76,8 +76,6 @@ class StatusGridViewController: UIViewController, UICollectionViewDataSource, UI
         let user = PFUser.current()!
         user["status"] = statusList[indexPath.item]["statusName"] as! String
         user.saveInBackground()
-        let presentedBy = presentingViewController as? ProfileViewController
-        presentedBy?.changeStatus()
         self.dismiss(animated: true)
     }
     /*
