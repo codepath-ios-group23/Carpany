@@ -15,89 +15,84 @@ class GarageViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var carsList = [PFObject]()
     var images = [PFObject?]()
+    var selectedCar : PFObject?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        let user = PFUser.current()!
-        let cars = user["cars"] as? Array<String>
-        if cars != nil && cars?.count != 0 {
-            self.getCarItem(i: 0, cars: cars!)
-        }
     }
     
     @IBAction func onReturn(_ sender: Any) {
         self.dismiss(animated: true)
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        self.getCarItem()
-//        self.loadCars()
-//    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        self.loadCars(i: 0)
+        self.images.removeAll()
+        self.carsList.removeAll()
+        let user = PFUser.current()!
+        let cars = user["cars"] as? Array<String>
+        if cars != nil && cars?.count != 0 {
+            self.getCarItem(i: 0, cars: cars!)
+        }
         
     }
     
     func getCarItem(i : Int, cars : Array<String>) {
-        
         if cars.count != 0 {
             let query = PFQuery(className: "Agg_car")
             let car = cars[i] as String
             query.getObjectInBackground(withId: car) { (carItem, error) in
                 if carItem != nil {
-                    self.carsList.append(carItem!)
+                    let maker = carItem!["Maker"] as! String
+                    let genmodel = carItem!["Genmodel"] as! String
+                    let genmodelId = carItem!["Genmodel_ID"] as! String
+                    
+                    let query2 = PFQuery(className: "image")
+                    query2.whereKey("Genmodel_ID", equalTo:genmodelId)
+                    query2.whereKey("Genmodel", equalTo:genmodel)
+                    query2.whereKey("Maker", equalTo:maker)
+                    query2.getFirstObjectInBackground() {(imageItem, error) in
+                        if imageItem != nil && error == nil {
+                            self.carsList.append(carItem!)
+                            self.images.append(imageItem)
+                            print(i)
+                            print("Number of image: \(self.images.count)")
+                            let imageName = imageItem!["Image_name"] as! String
+                            print(imageName)
+                            
+                        } else {
+                            self.carsList.append(carItem!)
+                            print(i)
+                            self.images.append(nil)
+                            print("No preview")
+                        }
+                        self.tableView.reloadData()
+                        if i < cars.count - 1 {
+                            self.getCarItem(i: i + 1, cars: cars)
+                        }
+                    }
                 } else {
                     print("No cars found!")
-                }
-                if i < cars.count - 1 {
-                    self.getCarItem(i: i+1, cars: cars)
                 }
             }
         }
     }
     
-    func loadCars(i : Int) {
-        if self.carsList.count != 0 {
-            let maker = self.carsList[i]["Maker"] as! String
-            let genmodel = self.carsList[i]["Genmodel"] as! String
-            let genmodelId = self.carsList[i]["Genmodel_ID"] as! String
-            print(maker)
-            print(genmodel)
-            print(genmodelId)
-            print()
-            
-            let query2 = PFQuery(className: "image")
-            query2.whereKey("Genmodel_ID", equalTo:genmodelId)
-            query2.whereKey("Genmodel", equalTo:genmodel)
-            query2.whereKey("Maker", equalTo:maker)
-            query2.getFirstObjectInBackground() {(imageItem, error) in
-                if imageItem != nil && error == nil {
-                    self.images.append(imageItem)
-                    print(i)
-                    print("Number of image: \(self.images.count)")
-                    let imageName = imageItem!["Image_name"] as! String
-                    print(imageName)
-                    
-                } else {
-                    print(i)
-                    self.images.append(nil)
-                    print("No preview")
-                }
-                self.tableView.reloadData()
-                if i < self.carsList.count - 1 {
-                    self.loadCars(i: i + 1)
-                }
-            }
-        }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCar = carsList[indexPath.row]
+        self.performSegue(withIdentifier: "toCarDetail", sender: nil)
     }
       
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       if (segue.identifier == "toCarDetail") {
+          let secondView = segue.destination as! CarDetailViewController
+           secondView.car = self.selectedCar!
+       }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.images.count
     }
