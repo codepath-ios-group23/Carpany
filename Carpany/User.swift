@@ -20,6 +20,7 @@ struct User: ParseUser {
   
   // Main properties linked to the user's information
   var username: String?
+    var nickname: String?
   var email: String?
   var emailVerified: Bool?
   var password: String?

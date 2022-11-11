@@ -18,6 +18,7 @@ class SignUpViewController: UIViewController, UITextViewDelegate, UIImagePickerC
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var phoneNumberField: UITextField!
     @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var nicknameField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,10 @@ class SignUpViewController: UIViewController, UITextViewDelegate, UIImagePickerC
         passwordField.isSecureTextEntry = true
         
         bioTextView.text = "Self-description"
+        
+        let nicknamePlaceholderText = NSAttributedString(string: "Nickname",
+                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        nicknameField.attributedPlaceholder = nicknamePlaceholderText
         
         let emailPlaceholderText = NSAttributedString(string: "Email",
                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
@@ -70,8 +75,11 @@ class SignUpViewController: UIViewController, UITextViewDelegate, UIImagePickerC
     @IBAction func phoneNumberChanged(_ sender: Any) {
         phoneNumberField.text = ""
     }
-   
-//    func textViewDidBeginEditing(_ textView: UITextView) {
+    
+    @IBAction func nicknameChanged(_ sender: Any) {
+        nicknameField.text = ""
+    }
+    //    func textViewDidBeginEditing(_ textView: UITextView) {
 //        bioTextView.text = ""
 //    }
     
@@ -128,6 +136,7 @@ class SignUpViewController: UIViewController, UITextViewDelegate, UIImagePickerC
             
             user["bio"] = self.bioTextView.text
             user["phone"] = self.phoneNumberField.text
+            user["Nickname"] = self.nicknameField.text
             
             let imageData = profileImage.image!.pngData()!
             print(imageData)
