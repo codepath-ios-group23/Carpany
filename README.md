@@ -274,11 +274,11 @@ Optional:
 - [x] User can filter to search gas station, car rental, parking, EV charger in map function(optional)
 - [x] User can post, comment, add picture in the home screen(required)
 - [x] User can thumb up or thumb down on posts(optional)
-- [x] User can read the full text when clicks on each post
-- [x] User can see the detail information of the user who posted the post
-- [x] User edit the profile image, status, nickname, and bio.
+- [x] User can read the full text when clicks on each post(required)
+- [x] User can see the detail information of the user who posted the post(required)
+- [x] User edit the profile image, status, nickname, and bio(required)
 
-## Video Walkthrough2
+## Video Walkthrough3
 <img src="https://i.imgur.com/A8GaP8b.gif" width=400>
  
 
