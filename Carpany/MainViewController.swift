@@ -137,10 +137,16 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             if upBy.contains(me.objectId!) {
                 cell.isUp = true
                 cell.upBtn.setImage(UIImage(named: "thumbs-up-fill"), for: .normal)
+            } else {
+                cell.isUp = false
+                cell.upBtn.setImage(UIImage(named: "thumbs-up"), for: .normal)
             }
             if downBy.contains(me.objectId!) {
                 cell.isDown = true
                 cell.downBtn.setImage(UIImage(named: "thumbs-down-fill"), for: .normal)
+            } else {
+                cell.isDown = false
+                cell.downBtn.setImage(UIImage(named: "thumbs-down"), for: .normal)
             }
             
             let profile = user["profileImage"] as! PFFileObject
