@@ -17,6 +17,7 @@ class ResetPasswordViewController: UIViewController {
 
         let emailPlaceholderText = NSAttributedString(string: "Email",
                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        self.hideKeyboardWhenTappedAround()
         emailField.attributedPlaceholder = emailPlaceholderText
         
     }

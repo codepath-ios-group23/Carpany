@@ -26,7 +26,7 @@ class SignUpViewController: UIViewController, UITextViewDelegate, UIImagePickerC
         // Do any additional setup after loading the view.
         setupOutlets()
         initializeHideKeyboard()
-        
+        self.hideKeyboardWhenTappedAround()
     }
     
     func setupOutlets() {

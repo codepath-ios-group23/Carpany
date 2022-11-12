@@ -7,18 +7,23 @@
 
 import UIKit
 import AlamofireImage
+import Foundation
 import Parse
 
-class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var commentField: UITextField!
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var commentField: UITextView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.hideKeyboardWhenTappedAround()
+        
+        commentField.delegate = self
+        commentField.layer.masksToBounds = true
+        commentField.layer.cornerRadius = 5
         // Do any additional setup after loading the view.
     }
     
@@ -50,7 +55,8 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
         picker.allowsEditing = true
         
         if UIImagePickerController.isSourceTypeAvailable(.camera){
-            picker.sourceType = .camera
+//            picker.sourceType = .camera
+            picker.sourceType = .photoLibrary // I have some issue on my iphone simulator which will trigger the camera but black
         }else{
             picker.sourceType = .photoLibrary
         }
@@ -68,10 +74,25 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
         dismiss(animated: true, completion: nil)
     }
     
+    func textViewDidChange(_ textView: UITextView) {
+        countLabel.text = String(commentField.text.count) + " / 2000"
+        if commentField.text.count > 1950 {
+            countLabel.textColor = UIColor.red
+        } else {
+            countLabel.textColor = UIColor.gray
+        }
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        let characterLimit = 2000
+        let newText = NSString(string: textView.text!).replacingCharacters(in: range, with: text)
+        return newText.count <= characterLimit
+    }
     
     @IBAction func onCancel(_ sender: Any) {
         self.dismiss(animated: true)
     }
+    
     /*
     // MARK: - Navigation
 
@@ -82,4 +103,17 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
     }
     */
 
+}
+
+extension UIViewController{
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
 }
