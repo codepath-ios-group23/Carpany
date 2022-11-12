@@ -23,6 +23,7 @@ class EditNameViewController: UIViewController, UITextViewDelegate {
         nameField.text = user["Nickname"] as? String
         
         self.textViewDidChange(nameField)
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
     
