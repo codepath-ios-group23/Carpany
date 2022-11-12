@@ -252,7 +252,7 @@ Optional:
 - [x] User Profile First Design(required)
 - [x] Search Tab Table View created(required)
 
-## Video Walkthrough
+## Video Walkthrough1
 <img src="https://i.imgur.com/Eg4h7Ij.gif" width=400>
 
 ## Milestone2
@@ -266,3 +266,21 @@ Optional:
 
 ## Video Walkthrough2
 <img src="https://i.imgur.com/YvA8IY3.gif" width=400>
+
+## Milestone3
+- [x] Skim / communicate with posts(optional)
+- [x] User can search and view car details(required)
+- [x] User can add cars or remove cars from garage in car details page(optional)
+- [x] User can filter to search gas station, car rental, parking, EV charger in map function(optional)
+- [x] User can post, comment, add picture in the home screen(required)
+- [x] User can thumb up or thumb down on posts(optional)
+- [x] User can read the full text when clicks on each post
+- [x] User can see the detail information of the user who posted the post
+- [x] User edit the profile image, status, nickname, and bio.
+
+## Video Walkthrough2
+<img src="https://i.imgur.com/A8GaP8b.gif" width=400>
+ 
+
+
+
