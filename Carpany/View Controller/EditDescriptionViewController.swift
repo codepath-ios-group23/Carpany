@@ -23,6 +23,7 @@ class EditDescriptionViewController: UIViewController, UITextViewDelegate {
         descriptionField.text = user["bio"] as? String
         
         self.textViewDidChange(descriptionField)
+        self.hideKeyboardWhenTappedAround()
         
         
         // Do any additional setup after loading the view.
