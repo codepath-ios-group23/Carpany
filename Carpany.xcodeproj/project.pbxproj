@@ -28,6 +28,9 @@
 		56887EEBAAA198B4988A2121 /* Pods_Carpany_CarpanyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C1045C8A0C80AA5A7D63ED /* Pods_Carpany_CarpanyUITests.framework */; };
 		812BCC26291AF6630021D63C /* StatusGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BCC25291AF6630021D63C /* StatusGridCell.swift */; };
 		812BCC28291AF6AB0021D63C /* StatusGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812BCC27291AF6AB0021D63C /* StatusGridViewController.swift */; };
+		8156A607291EFE3000139BE5 /* AddCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8156A606291EFE3000139BE5 /* AddCommentCell.swift */; };
+		8156A609291F450200139BE5 /* DetailReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8156A608291F450200139BE5 /* DetailReadingViewController.swift */; };
+		8156A60B291F4A3600139BE5 /* PostUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8156A60A291F4A3600139BE5 /* PostUserDetailViewController.swift */; };
 		81689463291635EC00250314 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 81689462291635EC00250314 /* README.md */; };
 		818CFB352919B90C00A173DB /* GarageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CFB342919B90C00A173DB /* GarageCell.swift */; };
 		81A765C6291D8788008F793E /* EditDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A765C5291D8788008F793E /* EditDescriptionViewController.swift */; };
@@ -93,6 +96,9 @@
 		5ED8A93F2DA2FB1089F01EE9 /* Pods-Carpany-CarpanyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carpany-CarpanyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Carpany-CarpanyUITests/Pods-Carpany-CarpanyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		812BCC25291AF6630021D63C /* StatusGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusGridCell.swift; sourceTree = "<group>"; };
 		812BCC27291AF6AB0021D63C /* StatusGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusGridViewController.swift; sourceTree = "<group>"; };
+		8156A606291EFE3000139BE5 /* AddCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentCell.swift; sourceTree = "<group>"; };
+		8156A608291F450200139BE5 /* DetailReadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReadingViewController.swift; sourceTree = "<group>"; };
+		8156A60A291F4A3600139BE5 /* PostUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUserDetailViewController.swift; sourceTree = "<group>"; };
 		81689462291635EC00250314 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		818CFB342919B90C00A173DB /* GarageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageCell.swift; sourceTree = "<group>"; };
 		81A765C5291D8788008F793E /* EditDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDescriptionViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +172,8 @@
 				81A765C5291D8788008F793E /* EditDescriptionViewController.swift */,
 				81A765C7291D8E53008F793E /* EditNameViewController.swift */,
 				81A765CF291E2689008F793E /* CarDetailViewController.swift */,
+				8156A608291F450200139BE5 /* DetailReadingViewController.swift */,
+				8156A60A291F4A3600139BE5 /* PostUserDetailViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -181,6 +189,7 @@
 				81A765C9291DD14D008F793E /* CarTableViewCell.swift */,
 				81A765CB291E2646008F793E /* DetailImageCell.swift */,
 				81A765CD291E2663008F793E /* DetailInfoCell.swift */,
+				8156A606291EFE3000139BE5 /* AddCommentCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -509,6 +518,7 @@
 				52A791D929135C2100228AE8 /* SearchTableViewCell.swift in Sources */,
 				81B5B6E9290CBEC10092C254 /* ProfileViewController.swift in Sources */,
 				524FC72F28FE5F50007E8801 /* User.swift in Sources */,
+				8156A60B291F4A3600139BE5 /* PostUserDetailViewController.swift in Sources */,
 				81A765CC291E2646008F793E /* DetailImageCell.swift in Sources */,
 				B845E7EC29162A6500757229 /* MainViewController.swift in Sources */,
 				81A765CA291DD14D008F793E /* CarTableViewCell.swift in Sources */,
@@ -519,7 +529,9 @@
 				524FC72B28FE5817007E8801 /* LoginViewController.swift in Sources */,
 				52A791D6291358D900228AE8 /* SearchMapViewController.swift in Sources */,
 				81A765D0291E2689008F793E /* CarDetailViewController.swift in Sources */,
+				8156A609291F450200139BE5 /* DetailReadingViewController.swift in Sources */,
 				8711BA7829184B6800B61F9D /* SearchViewController.swift in Sources */,
+				8156A607291EFE3000139BE5 /* AddCommentCell.swift in Sources */,
 				52FCF44328FE2A9800C0FDCB /* AppDelegate.swift in Sources */,
 				524FC72D28FE5825007E8801 /* SignUpViewController.swift in Sources */,
 				8711BA84291AF32700B61F9D /* DescriptionViewController.swift in Sources */,
