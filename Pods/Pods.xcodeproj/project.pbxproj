@@ -3767,7 +3767,7 @@
 			baseConfigurationReference = CECA458D87860F2173670174CD73CEDA /* Parse.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Parse";
-				DEVELOPMENT_TEAM = 8T742VG7ZG;
+				DEVELOPMENT_TEAM = SK9N96XN4K;
 				IBSC_MODULE = Parse;
 				INFOPLIST_FILE = "Target Support Files/Parse/ResourceBundle-Parse-Parse-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -4170,7 +4170,7 @@
 			baseConfigurationReference = 31D597C8484E693701DDB3CB322C8B5D /* Parse.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Parse";
-				DEVELOPMENT_TEAM = 8T742VG7ZG;
+				DEVELOPMENT_TEAM = SK9N96XN4K;
 				IBSC_MODULE = Parse;
 				INFOPLIST_FILE = "Target Support Files/Parse/ResourceBundle-Parse-Parse-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

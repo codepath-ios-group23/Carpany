@@ -113,6 +113,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let post = posts[section]
         let comments = (post["comments"] as? [PFObject]) ?? []
+        if (comments.count > 5) {
+            return 8
+        }
         return comments.count + 2
         
     }
@@ -127,7 +130,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let comments = (post["comments"] as? [PFObject]) ?? []
         
 
-        if indexPath.row == 0{
+        if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
             let user = post["author"] as! PFUser
             cell.post = post
@@ -171,15 +174,33 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.profileImage.layer.cornerRadius = 20
             
             return cell
-        } else if indexPath.row <= comments.count{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
-            let comment = comments[indexPath.row - 1]
-            cell.commentLabel.text = comment["text"] as? String
-            let user = comment["author"] as! PFUser
-            cell.nameLabel.text = user["Nickname"] as! String
-            
-            return cell
-        }else{
+        } else if indexPath.row <= 5 {
+            if indexPath.row <= comments.count {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
+                let comment = comments[indexPath.row - 1]
+                cell.commentLabel.text = comment["text"] as? String
+                let user = comment["author"] as! PFUser
+                cell.nameLabel.text = user["Nickname"] as! String
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
+                cell.layer.masksToBounds = true
+                cell.layer.cornerRadius = 5
+                return cell
+            }
+        } else if indexPath.row == 6 {
+            if comments.count > 5 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
+                cell.commentLabel.text = ""
+                cell.nameLabel.text = "..."
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
+                cell.layer.masksToBounds = true
+                cell.layer.cornerRadius = 5
+                return cell
+            }
+        } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
             cell.layer.masksToBounds = true
             cell.layer.cornerRadius = 5
@@ -193,7 +214,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let comments = (post["comments"] as? [PFObject]) ?? []
         selectedPost = post
         
-        if indexPath.row == comments.count+1{
+        if (comments.count <= 5 && indexPath.row == comments.count+1) || (indexPath.row == 7) {
             showsCommentBar = true
             becomeFirstResponder()
             
