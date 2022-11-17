@@ -10,20 +10,26 @@ import Parse
 import AlamofireImage
 import MessageInputBar
 
-class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, MessageInputBarDelegate {
+    
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var logoutBtn: UIButton!
     @IBOutlet weak var addPostBtn: UIButton!
     
+    let searchController = UISearchController(searchResultsController: nil)
     let commentBar = MessageInputBar()
     let myRefreshControl = UIRefreshControl()
     var showsCommentBar = false
     var posts = [PFObject]()
+    var originalPosts = [PFObject]()
     var selectedPost: PFObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
         
         commentBar.inputTextView.placeholder = "Add a comment..."
         commentBar.sendButton.title = "Post"
@@ -63,6 +69,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         query.findObjectsInBackground{(posts,error) in
             if posts != nil{
                 self.posts = posts!
+                self.originalPosts = posts!
                 self.tableView.reloadData()
                 self.myRefreshControl.endRefreshing()
             }
@@ -247,6 +254,22 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else{return}
         delegate.window?.rootViewController = loginViewController
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchedText = searchController.searchBar.text ?? ""
+        
+        if searchedText == "" {
+            self.posts = self.originalPosts
+        }
+        else {
+            self.posts = self.originalPosts.filter{(item) -> Bool in
+                let caption = item["caption"] as! String
+                return caption.contains(searchedText)
+            }
+        }
+        
+        tableView.reloadData()
     }
     
 }
