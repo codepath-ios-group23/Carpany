@@ -142,6 +142,18 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             let user = post["author"] as! PFUser
             cell.post = post
             cell.imgs = post["images"] as! Array<PFFileObject>
+            if cell.imgs.count == 1 {
+                let width = (cell.frame.size.width - cell.layout.minimumInteritemSpacing * 2)
+                cell.layout.itemSize = CGSize(width: width, height: width)
+            }
+            else if cell.imgs.count <= 4 {
+                let width = (cell.frame.size.width - cell.layout.minimumInteritemSpacing * 2) / 2 - 8
+                cell.layout.itemSize = CGSize(width: width, height: width)
+            }
+            else {
+                let width = (cell.frame.size.width - cell.layout.minimumInteritemSpacing * 2) / 3 - 8
+                cell.layout.itemSize = CGSize(width: width, height: width)
+            }
             cell.images.reloadData()
             let me = PFUser.current()!
             let upBy = post["upBy"] as! Array<String>
