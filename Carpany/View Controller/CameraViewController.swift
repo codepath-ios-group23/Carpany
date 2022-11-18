@@ -10,12 +10,14 @@ import AlamofireImage
 import Foundation
 import Parse
 
-class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var addBtn: UIButton!
+    @IBOutlet weak var images: UICollectionView!
     @IBOutlet weak var commentField: UITextView!
     
+    var imgs = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,22 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         commentField.delegate = self
         commentField.layer.masksToBounds = true
         commentField.layer.cornerRadius = 5
+        
+        addBtn.layer.masksToBounds = true
+        addBtn.setTitle("", for: .normal)
+        addBtn.layer.cornerRadius = 17.5
+        
+        images.delegate = self
+        images.dataSource = self
+        
+        let layout = images.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.minimumLineSpacing = 8
+        layout.minimumInteritemSpacing = 4
+        
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3 - 16
+        
+        layout.itemSize = CGSize(width: width, height: width)
         // Do any additional setup after loading the view.
     }
     
@@ -33,10 +51,14 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         post["caption"] = commentField.text!
         post["author"] =  PFUser.current()!
         
-        let imageData = imageView.image!.pngData()
-        let file = PFFileObject(name: "image.png", data: imageData!)
+        var files = [PFFileObject]()
+        for img in imgs {
+            let imageData = img.pngData()
+            let file = PFFileObject(name: "image.png", data: imageData!)!
+            files.append(file)
+        }
         
-        post["image"] = file
+        post["images"] = files
         
         post.saveInBackground{(success, error) in
             if success {
@@ -48,29 +70,14 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
     }
     
-    @IBAction func onCameraButton(_ sender: Any) {
-    
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.allowsEditing = true
-        
-        if UIImagePickerController.isSourceTypeAvailable(.camera){
-//            picker.sourceType = .camera
-            picker.sourceType = .photoLibrary // I have some issue on my iphone simulator which will trigger the camera but black
-        }else{
-            picker.sourceType = .photoLibrary
-        }
-        
-        present(picker, animated: true, completion: nil)
-    }
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.editedImage] as! UIImage
         
         let size = CGSize(width: 300, height: 300)
         let scaleimage = image.af_imageScaled(to: size)
         
-        imageView.image = scaleimage
+        imgs.append(scaleimage)
+        images.reloadData()
         dismiss(animated: true, completion: nil)
     }
     
@@ -91,6 +98,32 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func onCancel(_ sender: Any) {
         self.dismiss(animated: true)
+    }
+    
+    
+    @IBAction func onAddImage(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+//            picker.sourceType = .camera
+            picker.sourceType = .photoLibrary // I have some issue on my iphone simulator which will trigger the camera but black
+        }else{
+            picker.sourceType = .photoLibrary
+        }
+        
+        present(picker, animated: true, completion: nil)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return imgs.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddPostImageCell", for: indexPath) as! AddPostImageCell
+        cell.postImage.image = imgs[indexPath.item]
+        return cell
     }
     
     /*
