@@ -35,14 +35,23 @@ class DetailReadingViewController: UIViewController, UICollectionViewDelegate, U
         layout.minimumLineSpacing = 4
         layout.minimumInteritemSpacing = 4
         
-        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3 - 16
-        
-        layout.itemSize = CGSize(width: width, height: width)
-        
         images.delegate = self
         images.dataSource = self
         
         imgs = post["images"] as! Array<PFFileObject>
+        
+        if imgs.count == 1 {
+            let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2)
+            layout.itemSize = CGSize(width: width, height: width)
+        }
+        else if imgs.count <= 4 {
+            let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 2 - 16
+            layout.itemSize = CGSize(width: width, height: width)
+        }
+        else {
+            let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3 - 16
+            layout.itemSize = CGSize(width: width, height: width)
+        }
         
         user = post["author"] as! PFUser
         

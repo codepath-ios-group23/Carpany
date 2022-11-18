@@ -21,6 +21,7 @@ class PostCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
     var isDown: Bool = false
     var post: PFObject!
     var imgs: Array<PFFileObject> = []
+    var layout: UICollectionViewFlowLayout!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,14 +29,10 @@ class PostCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
         images.delegate = self
         images.dataSource = self
         
-        let layout = images.collectionViewLayout as! UICollectionViewFlowLayout
+        layout = images.collectionViewLayout as! UICollectionViewFlowLayout
         
-        layout.minimumLineSpacing = 4
+        layout.minimumLineSpacing = 8
         layout.minimumInteritemSpacing = 4
-        
-        let width = (self.frame.size.width - layout.minimumInteritemSpacing * 2) / 3 - 8
-        
-        layout.itemSize = CGSize(width: width, height: width)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
