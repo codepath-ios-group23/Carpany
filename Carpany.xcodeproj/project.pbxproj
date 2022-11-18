@@ -35,6 +35,9 @@
 		818CFB352919B90C00A173DB /* GarageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CFB342919B90C00A173DB /* GarageCell.swift */; };
 		819CCAF12925B176003B3394 /* ReadingCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CCAF02925B176003B3394 /* ReadingCommentsViewController.swift */; };
 		819CCAF32925B9D8003B3394 /* DetailCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CCAF22925B9D8003B3394 /* DetailCommentCell.swift */; };
+		819CCAF72926E05C003B3394 /* PostImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CCAF62926E05C003B3394 /* PostImageCollectionViewCell.swift */; };
+		819CCAF9292703EE003B3394 /* AddPostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CCAF8292703EE003B3394 /* AddPostImageCell.swift */; };
+		819CCAFB29270C9B003B3394 /* DetailReadingImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CCAFA29270C9B003B3394 /* DetailReadingImageCell.swift */; };
 		81A765C6291D8788008F793E /* EditDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A765C5291D8788008F793E /* EditDescriptionViewController.swift */; };
 		81A765C8291D8E53008F793E /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A765C7291D8E53008F793E /* EditNameViewController.swift */; };
 		81A765CA291DD14D008F793E /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A765C9291DD14D008F793E /* CarTableViewCell.swift */; };
@@ -105,6 +108,9 @@
 		818CFB342919B90C00A173DB /* GarageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageCell.swift; sourceTree = "<group>"; };
 		819CCAF02925B176003B3394 /* ReadingCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingCommentsViewController.swift; sourceTree = "<group>"; };
 		819CCAF22925B9D8003B3394 /* DetailCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCommentCell.swift; sourceTree = "<group>"; };
+		819CCAF62926E05C003B3394 /* PostImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		819CCAF8292703EE003B3394 /* AddPostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostImageCell.swift; sourceTree = "<group>"; };
+		819CCAFA29270C9B003B3394 /* DetailReadingImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReadingImageCell.swift; sourceTree = "<group>"; };
 		81A765C5291D8788008F793E /* EditDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDescriptionViewController.swift; sourceTree = "<group>"; };
 		81A765C7291D8E53008F793E /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
 		81A765C9291DD14D008F793E /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
@@ -196,6 +202,9 @@
 				81A765CD291E2663008F793E /* DetailInfoCell.swift */,
 				8156A606291EFE3000139BE5 /* AddCommentCell.swift */,
 				819CCAF22925B9D8003B3394 /* DetailCommentCell.swift */,
+				819CCAF62926E05C003B3394 /* PostImageCollectionViewCell.swift */,
+				819CCAF8292703EE003B3394 /* AddPostImageCell.swift */,
+				819CCAFA29270C9B003B3394 /* DetailReadingImageCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -523,6 +532,7 @@
 				8711BA7A291855E900B61F9D /* CarTableViewController.swift in Sources */,
 				52A791D929135C2100228AE8 /* SearchTableViewCell.swift in Sources */,
 				81B5B6E9290CBEC10092C254 /* ProfileViewController.swift in Sources */,
+				819CCAFB29270C9B003B3394 /* DetailReadingImageCell.swift in Sources */,
 				819CCAF12925B176003B3394 /* ReadingCommentsViewController.swift in Sources */,
 				524FC72F28FE5F50007E8801 /* User.swift in Sources */,
 				8156A60B291F4A3600139BE5 /* PostUserDetailViewController.swift in Sources */,
@@ -539,7 +549,9 @@
 				81A765D0291E2689008F793E /* CarDetailViewController.swift in Sources */,
 				8156A609291F450200139BE5 /* DetailReadingViewController.swift in Sources */,
 				8711BA7829184B6800B61F9D /* SearchViewController.swift in Sources */,
+				819CCAF9292703EE003B3394 /* AddPostImageCell.swift in Sources */,
 				8156A607291EFE3000139BE5 /* AddCommentCell.swift in Sources */,
+				819CCAF72926E05C003B3394 /* PostImageCollectionViewCell.swift in Sources */,
 				52FCF44328FE2A9800C0FDCB /* AppDelegate.swift in Sources */,
 				524FC72D28FE5825007E8801 /* SignUpViewController.swift in Sources */,
 				8711BA84291AF32700B61F9D /* DescriptionViewController.swift in Sources */,

@@ -8,22 +8,34 @@
 import UIKit
 import Parse
 
-class PostCell: UITableViewCell {
+class PostCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var captionLabel: UILabel!
-    @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var images: UICollectionView!
     @IBOutlet weak var upBtn: UIButton!
     @IBOutlet weak var downBtn: UIButton!
     
-    var isUp : Bool = false
-    var isDown : Bool = false
-    var post : PFObject!
+    var isUp: Bool = false
+    var isDown: Bool = false
+    var post: PFObject!
+    var imgs: Array<PFFileObject> = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        images.delegate = self
+        images.dataSource = self
+        
+        let layout = images.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.minimumLineSpacing = 4
+        layout.minimumInteritemSpacing = 4
+        
+        let width = (self.frame.size.width - layout.minimumInteritemSpacing * 2) / 3 - 8
+        
+        layout.itemSize = CGSize(width: width, height: width)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -80,5 +92,22 @@ class PostCell: UITableViewCell {
         post["upBy"] = upBy
         post["downBy"] = downBy
         post.saveInBackground()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if imgs.count <= 9 {
+            return imgs.count
+        }
+        return 9
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostImageCollectionViewCell", for: indexPath) as! PostImageCollectionViewCell
+        let imgFile = imgs[indexPath.item]
+        let urlString = imgFile.url!
+        let url = URL(string: urlString)!
+        cell.postImage.af.setImage(withURL: url)
+        return cell
     }
 }
