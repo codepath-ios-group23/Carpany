@@ -106,14 +106,26 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         picker.delegate = self
         picker.allowsEditing = true
         
-        if UIImagePickerController.isSourceTypeAvailable(.camera){
-//            picker.sourceType = .camera
-            picker.sourceType = .photoLibrary // I have some issue on my iphone simulator which will trigger the camera but black
-        }else{
+        let alert = UIAlertController(title: "Title", message: "Please Select an Option", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Take Picture", style: .default, handler: { (_) in
+            print("in")
+            picker.sourceType = .camera
+            self.present(picker, animated: true, completion: nil)
+        }))
+
+        alert.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (_) in
             picker.sourceType = .photoLibrary
-        }
-        
-        present(picker, animated: true, completion: nil)
+            self.present(picker, animated: true, completion: nil)
+        }))
+
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { (_) in
+            print("User click Dismiss button")
+        }))
+
+        self.present(alert, animated: true, completion: {
+            print("completion block")
+        })
+
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
