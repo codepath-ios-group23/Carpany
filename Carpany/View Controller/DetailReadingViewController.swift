@@ -9,12 +9,12 @@ import UIKit
 import Parse
 import Alamofire
 
-class DetailReadingViewController: UIViewController {
+class DetailReadingViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var images: UICollectionView!
     @IBOutlet weak var commentButton: UIButton!
     @IBOutlet weak var postText: UITextView!
     @IBOutlet weak var thumbsUpBtn: UIButton!
@@ -25,8 +25,24 @@ class DetailReadingViewController: UIViewController {
     var isUp = false
     var isDown = false
     
+    var imgs: Array<PFFileObject> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let layout = images.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.minimumLineSpacing = 4
+        layout.minimumInteritemSpacing = 4
+        
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3 - 16
+        
+        layout.itemSize = CGSize(width: width, height: width)
+        
+        images.delegate = self
+        images.dataSource = self
+        
+        imgs = post["images"] as! Array<PFFileObject>
         
         user = post["author"] as! PFUser
         
@@ -40,14 +56,8 @@ class DetailReadingViewController: UIViewController {
         postText.text = post["caption"] as! String
         profileButton.setTitle("", for: .normal)
         commentButton.setTitle("", for: .normal)
-        let imageFile = post["image"] as! PFFileObject
-        let urlString = imageFile.url!
-        let url = URL(string: urlString)!
         
-        postImage.af.setImage(withURL: url)
         
-        postImage.layer.masksToBounds = true
-        postImage.layer.cornerRadius = 5
         
         profileImage.layer.masksToBounds = true
         profileImage.layer.cornerRadius = 20
@@ -70,6 +80,10 @@ class DetailReadingViewController: UIViewController {
             thumbsDownBtn.setImage(UIImage(named: "thumbs-down"), for: .normal)
         }
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        images.reloadData()
     }
     
     @IBAction func onSkimDetail(_ sender: Any) {
@@ -143,6 +157,20 @@ class DetailReadingViewController: UIViewController {
         post["upBy"] = upBy
         post["downBy"] = downBy
         post.saveInBackground()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(imgs.count)
+        return imgs.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DetailReadingImageCell", for: indexPath) as! DetailReadingImageCell
+        let imgFile = imgs[indexPath.item]
+        let urlString = imgFile.url!
+        let url = URL(string: urlString)!
+        cell.postImage.af.setImage(withURL: url)
+        return cell
     }
     /*
     // MARK: - Navigation

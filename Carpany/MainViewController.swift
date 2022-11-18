@@ -141,6 +141,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
             let user = post["author"] as! PFUser
             cell.post = post
+            cell.imgs = post["images"] as! Array<PFFileObject>
+            cell.images.reloadData()
             let me = PFUser.current()!
             let upBy = post["upBy"] as! Array<String>
             let downBy = post["downBy"] as! Array<String>
@@ -168,14 +170,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             cell.captionLabel.text = post["caption"] as! String
             
-            let imageFile = post["image"] as! PFFileObject
-            let urlString = imageFile.url!
-            let url = URL(string: urlString)!
-            
-            cell.photoView.af.setImage(withURL: url)
-            
-            cell.photoView.layer.masksToBounds = true
-            cell.photoView.layer.cornerRadius = 5
+//            let imageFile = post["image"] as! PFFileObject
+//            let urlString = imageFile.url!
+//            let url = URL(string: urlString)!
+//
+//            cell.photoView.af.setImage(withURL: url)
+//
+//            cell.photoView.layer.masksToBounds = true
+//            cell.photoView.layer.cornerRadius = 5
             
             cell.profileImage.layer.masksToBounds = true
             cell.profileImage.layer.cornerRadius = 20
@@ -265,7 +267,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         else {
             self.posts = self.originalPosts.filter{(item) -> Bool in
                 let caption = item["caption"] as! String
-                return caption.contains(searchedText)
+                let user = item["author"] as! PFUser
+                let nickname = user["Nickname"] as! String
+                return caption.contains(searchedText) || nickname.contains(searchedText)
             }
         }
         
