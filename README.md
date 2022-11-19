@@ -281,6 +281,16 @@ Optional:
 ## Video Walkthrough3
 <img src="https://i.imgur.com/A8GaP8b.gif" width=400>
  
+## Milestone4
+- [x] Thumbs up/down in detail reading screen(required)
+- [x] People could see all comments in deatail reading screen with a better UI(required)
+- [x] Now people could submit posts with multiple images(required)
+- [x] Now people could choose the way of uploading images(required)
+- [x] Now home page has a limitaion of images amount, comments length and comments amount(required)
+- [x] People could all images in the detail reading page(required)
+- [x] User could search for posts by using keywords of post's content and poster's name(required)
 
+## Video Walkthrough4
+[Carpany Demo Video](https://www.youtube.com/watch?v=yDyZk5129VM)
 
 
